@@ -1,18 +1,12 @@
-City,State/Province,Country,Latitude,Longitude
-Cook Islands​,,Cook Islands​,-19.99697155,-157.78587140620786
-Antigua and Barbuda​,,Antigua and Barbuda​,17.2234721,-61.9554608
-Turks and Caicos Islands​,,Turks and Caicos Islands​,21.721746,-71.5527809
-Great Ocean Road,Victoria, Australia,-24.7761086,134.755
-Pembrokeshire,Wales, United Kingdom,54.7023545,-3.2765753
-Mauritius​,,Mauritius​,-20.2759451,57.5703566
-Cayman Islands​,,Cayman Islands​,19.703182249999998,-79.9174627243246
-Seychelles​,,Seychelles​,-4.6574977,55.4540146
-French Polynesia,France,France,46.603354,1.8883335
-Barbados​,,Barbados​,13.1500331,-59.5250305
-Jamaica​,,Jamaica​,18.1850507,-77.3947693
-Pizol,Switzerland,Switzerland,46.7985624,8.2319736
-Santorini,Greece,Greece,38.9953683,21.9877132
-Kaua'i,Hawaii, United States,39.7837304,-100.445882
-Fiji​,,Fiji​,-18.1239696,179.0122737
-Saint Lucia​,,Saint Lucia​,13.8250489,-60.975036
-Bahamas​,,Bahamas​,24.7736546,-78.0000547
+Unnamed: 0,City,State/Province,Country,Latitude,Longitude
+2,Cook Islands​,,Cook Islands​,-19.99697155,-157.78587140620786
+13,Antigua and Barbuda​,,Antigua and Barbuda​,17.2234721,-61.9554608
+16,Turks and Caicos Islands​,,Turks and Caicos Islands​,21.721746,-71.5527809
+29,Mauritius​,,Mauritius​,-20.2759451,57.5703566
+31,Cayman Islands​,,Cayman Islands​,19.703182249999998,-79.9174627243246
+32,Seychelles​,,Seychelles​,-4.6574977,55.4540146
+47,Barbados​,,Barbados​,13.1500331,-59.5250305
+56,Jamaica​,,Jamaica​,18.1850507,-77.3947693
+86,Fiji​,,Fiji​,-18.1239696,179.0122737
+89,Saint Lucia​,,Saint Lucia​,13.8250489,-60.975036
+91,Bahamas​,,Bahamas​,24.7736546,-78.0000547
