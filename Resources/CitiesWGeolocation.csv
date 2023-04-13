@@ -1,7 +1,7 @@
 ,City,State/Province,Country,Latitude,Longitude
 0,Lexington,Kentucky, United States,38.0464066,-84.4970393
 1,San Diego,California,United States,32.7174202,-117.1627728
-2,Cook Islands​,,Cook Islands​,21.721746,-71.5527809
+2,Cook Islands​,,Cook Islands​,-19.99697155,-157.78587140620786
 3,Park City,Utah, United States,40.6460921,-111.4979963
 4,Newcastle Upon Tyne,England, United Kingdom,54.9738474,-1.6131572
 5,Brisbane,Queensland,Australia,-27.4689682,153.0234991
@@ -12,10 +12,10 @@
 10,Dubrovnik,Croatia,Croatia,42.64873625,18.094680152605108
 11,Durango,Colorado, United States,37.2395367,-107.82158179169292
 12,Port Stephens,New South Wales, Australia,-32.728465,151.93801008854467
-13,Antigua and Barbuda​,,Antigua and Barbuda​,,
+13,Antigua and Barbuda​,,Antigua and Barbuda​,17.223472100000002,-61.9554608
 14,Dubai,United Arab Emirates,United Arab Emirates,25.2653471,55.2924914
 15,Isle of Wight,England, United Kingdom,50.67108245,-1.3328042802764226
-16,Turks and Caicos Islands​,,Turks and Caicos Islands​,,
+16,Turks and Caicos Islands​,,Turks and Caicos Islands​,21.721746,-71.5527809
 17,Marbella,Andalusia, Spain,36.508976,-4.88562
 18,Savannah,Georgia, United States,32.0564572,-81.0951271
 19,Port Douglas & Daintree,Queensland, Australia,-16.4845983,145.4636294
@@ -23,44 +23,35 @@
 21,Magnetic Island,Queensland, Australia,-19.1421421,146.83354856403196
 22,Stellenbosch,Western Cape, South Africa,-33.934444,18.869167
 23,Byron Bay,New South Wales, Australia,-28.6483333,153.6177778
-24,Great Ocean Road,Victoria, Australia,,
 25,Queenstown,Otago, New Zealand,-45.0321923,168.661
 26,Palm Springs,California, United States,33.772179449999996,-116.49529769683983
-27,Pembrokeshire,Wales, United Kingdom,,
 28,Zanzibar,Tanzania,Tanzania,-6.1664908,39.2074312
-29,Mauritius​,,Mauritius​,,
+29,Mauritius​,,Mauritius​,-20.2759451,57.5703566
 30,Venice,Italy,Italy,45.4371908,12.3345898
-31,Cayman Islands​,,Cayman Islands​,,
-32,Seychelles​,,Seychelles​,,
+31,Cayman Islands​,,Cayman Islands​,19.70318225,-79.9174627243246
+32,Seychelles​,,Seychelles​,-4.6574976999999995,55.45401460000001
 33,Gold Coast,Queensland, Australia,-28.0023731,153.4145987
 34,Stowe,Vermont, United States,44.4654236,-72.6854695
 35,Marrakesh,Morocco,Morocco,31.6258257,-7.9891608
-36,Cumbria,England, United Kingdom,,
 37,Telluride,Colorado, United States,37.9374939,-107.812285
 38,Kelowna,British Columbia, Canada,49.8879177,-119.495902
 39,Niagara Falls,Ontario, Canada,43.1065603,-79.0639039
 40,Gulf Shores & Orange Beach,Alabama, United States,30.2711224,-87.6893826
-41,Greater Geelong & the Bellarine,Victoria, Australia,,
 42,Puerto Rico,United States,United States,15.2214956,145.7384857
 43,Biarritz,France,France,43.4832523,-1.5592776
 44,Margaret River,Western Australia, Australia,-33.9531776,115.0769369
 45,Jaipur,Rajasthan, India,26.9154576,75.8189817
-46,French Polynesia,France,France,,
-47,Barbados​,,Barbados​,,
+47,Barbados​,,Barbados​,13.1500331,-59.52503050000001
 48,Tulum,Yucatan, Mexico,20.169626800000003,-87.44979005748027
 49,Southend-on-Sea,England, United Kingdom,51.5388241,0.7128137
 50,Bergen,Hordaland, Norway,60.3943055,5.3259192
 51,Udaipur,Rajasthan, India,24.578721,73.6862571
-52,Lake District,England, United Kingdom,,
 53,Barossa,South Australia, Australia,-34.61341495,138.93854551693641
 54,Sedona,Arizona, United States,34.8629426,-111.8137097
-55,Cornwall,England, United Kingdom,,
-56,Jamaica​,,Jamaica​,,
-57,Hunter Valley,New South Wales, Australia,,
+56,Jamaica​,,Jamaica​,18.185050699999998,-77.3947693
 58,Aruba,Kingdom of the Netherlands,Kingdom of the Netherlands,12.51756625,-69.98186415210564
 59,Shoalhaven,New South Wales, Australia,-35.14181285,150.39164649482632
 60,Hermanus,Western Cape, South Africa,-34.4175,19.2361111
-61,Pizol,Switzerland,Switzerland,,
 62,Esperance,Western Australia, Australia,-33.861166499999996,121.88851585854931
 63,Cairns,Queensland, Australia,-16.9206657,145.7721854
 64,Sestriere,Turin, Italy,44.9584528,6.8786855
@@ -74,10 +65,8 @@
 72,Bordeaux,France,France,44.841225,-0.5800364
 73,Agra,Uttar Pradesh, India,27.1752554,78.0098161
 74,Aspen,Colorado, United States,39.1911128,-106.8235606
-75,Santorini,Greece,Greece,,
 76,Odense,Fyn, Denmark,55.3997225,10.3852104
 77,Adelaide,South Australia,Australia,-34.9281805,138.5999312
-78,Kaua'i,Hawaii, United States,,
 79,Swansea,Wales, United Kingdom,51.6195955,-3.9459248
 80,Dallas,Texas, United States,32.7762719,-96.7968559
 81,Corpus Christi,Texas, United States,27.7635302,-97.4033191
@@ -85,20 +74,17 @@
 83,Miami Beach,Florida, United States,25.7929198,-80.1353006
 84,Napa,California, United States,38.2971367,-122.2855293
 85,Asheville,North Carolina, United States,35.6009498,-82.5540161
-86,Fiji​,,Fiji​,,
+86,Fiji​,,Fiji​,-18.123969600000002,179.0122737
 87,Austin,Texas, United States,30.2711286,-97.7436995
 88,St. Petersburg,Florida,Russia,59.938732,30.316229
-89,Saint Lucia​,,Saint Lucia​,,
+89,Saint Lucia​,,Saint Lucia​,13.8250489,-60.975035999999996
 90,Scottsdale,Arizona, United States,33.4942189,-111.9260184
-91,Bahamas​,,Bahamas​,,
+91,Bahamas​,,Bahamas​,24.7736546,-78.0000547
 92,St. Moritz,Switzerland,Switzerland,46.4978958,9.8392428
 93,Bali,Indonesia,Indonesia,-8.456018100000001,115.27038551191185
 94,Noosa,Queensland, Australia,-26.3181415,152.93140931825064
-95,Perth and Kinross,Scotland, United Kingdom,,
 96,Ibiza,Balearic Islands, Spain,38.974390099999994,1.4197463178515335
-97,Yarra Valley,Victoria, Australia,,
 98,Whitsundays,Queensland, Australia,-20.310115,149.00672307352474
-99,,,,,
 100,Bangkok,,Thailand,13.7524938,100.4935089
 101,New Delhi,,India,28.6138954,77.2090057
 102,Lisbon,,Portugal,38.7077507,-9.1365919
@@ -130,7 +116,6 @@
 128,Los Angeles,,United States,34.0536909,-118.242766
 129,Moscow,,Russia,55.7504461,37.6174943
 130,Hoi An,,Vietnam,15.8798137,108.3273939
-131,Hong Kong,,Hong Kong,,
 132,Colombo,,Sri Lanka,6.9387469,79.8541134
 133,Seoul,,South Korea,37.5666791,126.9782914
 134,Las Vegas,,United States,36.1672559,-115.148516
@@ -175,7 +160,6 @@
 173,Tallinn,,Estonia,59.4372155,24.7453688
 174,Zagreb,,Croatia,45.84264135,15.962231476593626
 175,Xi'an,,China,34.2607713,108.9423443
-176,Yangon,,Burma/Myanmar,,
 177,Kyoto,,Japan,35.021041,135.7556075
 178,Hamburg,,Germany,53.550341,10.000654
 179,Naples,,Italy,40.8358846,14.2487679
@@ -198,7 +182,6 @@
 196,London,,United Kingdom,51.5073359,-0.12765
 197,Stockholm,,Sweden,59.3251172,18.0710935
 198,Manila,,Philippines,14.5948914,120.9782618
-199,Honolulu,,Hawaii,,
 200,Munich,,Germany,48.1371079,11.5753822
 201,Boston,,United States,42.3554334,-71.060511
 202,Calgary,,Canada,51.0460954,-114.065465
