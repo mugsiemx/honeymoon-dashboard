@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title> Honeymoon Destinations</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -28,6 +28,13 @@
     @media screen and (max-width:767px){
       .row.content{height:auto;}
     }
+    .myInput {
+      padding: 20px;
+      margin-top: -6px;
+      border: 0;
+      border-radius: 0;
+      background: #f1f1f1;
+  }
   </style>
 </head>
 
@@ -39,7 +46,26 @@
         <h3>Filters</h3>
         <ul class="nav nav-pills nav-stacked">
           <li class="well mx-auto">Month</li>
-            <div class="container mx-auto">
+            <div class="container-fluid">
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Month
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                  <li><a href='#'>January</a></li>
+                  <li>February</li>
+                  <li>March</li>
+                  <li>April</li>
+                  <li>May</li>
+                  <li>June</li>
+                  <li>July</li>
+                  <li>August</li>
+                  <li>September</li>
+                  <li>October</li>
+                  <li>November</li>
+                  <li>December</li>
+                </ul>
+              </div>
             </div>
           <li class="well mx-auto">Rating</li>
             <div class="container mx-auto">
@@ -98,10 +124,21 @@
   <!-- API key -->
   <script type="text/javascript" src="static/js/config.js"></script>
    
-    <!-- Our JavaScript -->
-    <script type="text/javascript" src="static/js/logic.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="static/js/logic.js"></script>
 
-  
+  <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".dropdown-menu li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
   
 
 </body>
