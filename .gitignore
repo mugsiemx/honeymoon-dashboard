@@ -134,3 +134,6 @@ config.ipynb
 
 # Test files that don't need tracking
 test_3_CitiesWGeolocation.csv
+
+# Render file
+render.yaml
