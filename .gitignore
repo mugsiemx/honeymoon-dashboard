@@ -131,3 +131,9 @@ dmypy.json
 # Config files with API keys
 config.py
 config.ipynb
+
+# Test files that don't need tracking
+test_3_CitiesWGeolocation.csv
+
+# Render file
+render.yaml
