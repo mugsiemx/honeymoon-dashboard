@@ -32,4 +32,4 @@ def index():
 
 @app.route('/api/get_all')
 def getdata():
-    return jsonify(**Activities.json,**CountryFlags.json,**Locations.json,**SunHours.json,**Temperature.json,**ActivityList.json)
+    return jsonify(**Activities,**CountryFlags,**Locations,**SunHours,**Temperature,**ActivityList)
