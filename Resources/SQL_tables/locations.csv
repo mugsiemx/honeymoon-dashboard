@@ -1,0 +1,175 @@
+,LocationID,City,Locality,Country,Latitude,Longitude
+0,0,Lexington,Kentucky,United States,38.0,-84.0
+1,1,San Diego,California,United States,33.0,-117.0
+2,2,Park City,Utah,United States,41.0,-111.0
+3,3,Newcastle Upon Tyne,England,United Kingdom,55.0,-2.0
+4,4,Brisbane,Queensland,Australia,-27.0,153.0
+5,5,Brisbane,Queensland,Australia,-27.0,153.0
+6,6,Sunshine Coast,Queensland,Australia,-27.0,153.0
+7,7,Sunshine Coast,Queensland,Australia,-27.0,153.0
+8,8,Scenic Rim,Queensland,Australia,-28.0,153.0
+9,9,Scenic Rim,Queensland,Australia,-28.0,153.0
+10,10,Gold Coast,Queensland,Australia,-28.0,153.0
+11,11,Gold Coast,Queensland,Australia,-28.0,153.0
+12,12,Big Bear Lake,California,United States,34.0,-117.0
+13,13,Grampians,Victoria,Australia,-37.0,142.0
+14,14,Fernie,British Columbia,Canada,50.0,-115.0
+15,15,Durango,Colorado,United States,37.0,-108.0
+16,16,Port Stephens,New South Wales,Australia,-33.0,152.0
+17,17,Antigua And Barbuda​,nan,Antigua And Barbuda,17.0,-62.0
+18,18,Isle Of Wight,England,United Kingdom,51.0,-1.0
+19,19,Marbella,Andalusia,Spain,37.0,-5.0
+20,20,Savannah,Georgia,United States,32.0,-81.0
+21,21,Port Douglas & Daintree,Queensland,Australia,-16.0,145.0
+22,22,Magnetic Island,Queensland,Australia,-19.0,147.0
+23,23,Stellenbosch,Western Cape,South Africa,-34.0,19.0
+24,24,Hermanus,Western Cape,South Africa,-34.0,19.0
+25,25,Byron Bay,New South Wales,Australia,-29.0,154.0
+26,26,Queenstown,Otago,New Zealand,-45.0,169.0
+27,27,Palm Springs,California,United States,34.0,-116.0
+28,28,Venice,Italy,Italy,45.0,12.0
+29,29,Stowe,Vermont,United States,44.0,-73.0
+30,30,Telluride,Colorado,United States,38.0,-108.0
+31,31,Kelowna,British Columbia,Canada,50.0,-119.0
+32,32,Niagara Falls,Ontario,Canada,43.0,-79.0
+33,33,Gulf Shores & Orange Beach,Alabama,United States,30.0,-88.0
+34,34,Puerto Rico,United States,United States,15.0,146.0
+35,35,Biarritz,France,France,43.0,-2.0
+36,36,Margaret River,Western Australia,Australia,-34.0,115.0
+37,37,Barbados​,nan,Barbados,13.0,-60.0
+38,38,Tulum,Yucatan,Mexico,20.0,-87.0
+39,39,Southend-On-Sea,England,United Kingdom,52.0,1.0
+40,40,Bergen,Hordaland,Norway,60.0,5.0
+41,41,Barossa,South Australia,Australia,-35.0,139.0
+42,42,Barossa,South Australia,Australia,-35.0,139.0
+43,43,Adelaide,South Australia,Australia,-35.0,139.0
+44,44,Adelaide,South Australia,Australia,-35.0,139.0
+45,45,Sedona,Arizona,United States,35.0,-112.0
+46,46,Aruba,Kingdom Of The Netherlands,Netherlands,13.0,-70.0
+47,47,Shoalhaven,New South Wales,Australia,-35.0,150.0
+48,48,Esperance,Western Australia,Australia,-34.0,122.0
+49,49,Cairns,Queensland,Australia,-17.0,146.0
+50,50,Sestriere,Turin,Italy,45.0,7.0
+51,51,Wollongong,New South Wales,Australia,-34.0,151.0
+52,52,Wollongong,New South Wales,Australia,-34.0,151.0
+53,53,Sydney,nan,Australia,-34.0,151.0
+54,54,Sydney,nan,Australia,-34.0,151.0
+55,55,Canmore,Alberta,Canada,51.0,-115.0
+56,56,Lake Placid,New York,United States,44.0,-74.0
+57,57,Melbourne,Victoria,Australia,-38.0,145.0
+58,58,Perth,Western Australia,Australia,-32.0,116.0
+59,59,Bristol,England,United Kingdom,51.0,-3.0
+60,60,Bordeaux,France,France,45.0,-1.0
+61,61,Aspen,Colorado,United States,39.0,-107.0
+62,62,Odense,Fyn,Denmark,55.0,10.0
+63,63,Swansea,Wales,United Kingdom,52.0,-4.0
+64,64,Dallas,Texas,United States,33.0,-97.0
+65,65,Corpus Christi,Texas,United States,28.0,-97.0
+66,66,Exmouth,Western Australia,Australia,-22.0,114.0
+67,67,Miami Beach,Florida,United States,26.0,-80.0
+68,68,Miami Beach,Florida,United States,26.0,-80.0
+69,69,Miami,nan,United States,26.0,-80.0
+70,70,Miami,nan,United States,26.0,-80.0
+71,71,Napa,California,United States,38.0,-122.0
+72,72,Napa,California,United States,38.0,-122.0
+73,73,San Francisco,nan,United States,38.0,-122.0
+74,74,San Francisco,nan,United States,38.0,-122.0
+75,75,Asheville,North Carolina,United States,36.0,-83.0
+76,76,Austin,Texas,United States,30.0,-98.0
+77,77,Saint Lucia​,nan,Saint Lucia,14.0,-61.0
+78,78,Scottsdale,Arizona,United States,33.0,-112.0
+79,79,Scottsdale,Arizona,United States,33.0,-112.0
+80,80,Phoenix,nan,United States,33.0,-112.0
+81,81,Phoenix,nan,United States,33.0,-112.0
+82,82,St. Moritz,Switzerland,Switzerland,46.0,10.0
+83,83,Noosa,Queensland,Australia,-26.0,153.0
+84,84,Ibiza,Balearic Islands,Spain,39.0,1.0
+85,85,Whitsundays,Queensland,Australia,-20.0,149.0
+86,86,Lisbon,nan,Portugal,39.0,-9.0
+87,87,Barcelona,nan,Spain,41.0,2.0
+88,88,Istanbul,nan,Turkey,41.0,29.0
+89,89,Chiang Mai,nan,Thailand,19.0,99.0
+90,90,Madrid,nan,Spain,40.0,-4.0
+91,91,São Paulo,nan,Brazil,-24.0,-47.0
+92,92,Rio De Janeiro,nan,Brazil,-23.0,-43.0
+93,93,Mexico City,nan,Mexico,19.0,-99.0
+94,94,Krakow,nan,Poland,50.0,20.0
+95,95,Kuala Lumpur,nan,Malaysia,3.0,102.0
+96,96,Ho Chi Minh City,nan,Vietnam,11.0,107.0
+97,97,Singapore,nan,Singapore,1.0,104.0
+98,98,Siem Reap,nan,Cambodia,13.0,104.0
+99,99,Porto,nan,Portugal,41.0,-9.0
+100,100,Valencia,nan,Spain,39.0,-0.0
+101,101,Los Angeles,nan,United States,34.0,-118.0
+102,102,Las Vegas,nan,United States,36.0,-115.0
+103,103,Santiago,nan,Chile,-33.0,-71.0
+104,104,Berlin,nan,Germany,53.0,13.0
+105,105,Tokyo,nan,Japan,36.0,140.0
+106,106,Chicago,nan,United States,42.0,-88.0
+107,107,Vienna,nan,Austria,48.0,16.0
+108,108,New York,nan,United States,41.0,-74.0
+109,109,Malaga,nan,Spain,37.0,-4.0
+110,110,Houston,nan,United States,30.0,-95.0
+111,111,Seville,nan,Spain,37.0,-6.0
+112,112,Taipei,nan,Taiwan,25.0,122.0
+113,113,Rome,nan,Italy,42.0,12.0
+114,114,Faro,nan,Portugal,37.0,-8.0
+115,115,Osaka,nan,Japan,35.0,136.0
+116,116,Osaka,nan,Japan,35.0,136.0
+117,117,Kyoto,nan,Japan,35.0,136.0
+118,118,Kyoto,nan,Japan,35.0,136.0
+119,119,Lima,nan,Peru,-12.0,-77.0
+120,120,Montreal,nan,Canada,46.0,-74.0
+121,121,Warsaw,nan,Poland,52.0,21.0
+122,122,Paris,nan,France,49.0,2.0
+123,123,Toronto,nan,Canada,44.0,-79.0
+124,124,Florence,nan,Italy,44.0,11.0
+125,125,Oaxaca,nan,Mexico,17.0,-97.0
+126,126,Liverpool,nan,United Kingdom,53.0,-3.0
+127,127,New Orleans,nan,United States,30.0,-90.0
+128,128,Washington Dc,nan,United States,39.0,-77.0
+129,129,Tallinn,nan,Estonia,59.0,25.0
+130,130,Hamburg,nan,Germany,54.0,10.0
+131,131,Naples,nan,Italy,41.0,14.0
+132,132,Vancouver,nan,Canada,49.0,-123.0
+133,133,Milan,nan,Italy,45.0,9.0
+134,134,Portland,nan,United States,46.0,-123.0
+135,135,Split,nan,Croatia,44.0,16.0
+136,136,Cancun,nan,Mexico,21.0,-87.0
+137,137,Brussels,nan,Belgium,51.0,4.0
+138,138,Dublin,nan,Ireland,53.0,-6.0
+139,139,Lyon,nan,France,46.0,5.0
+140,140,Palma De Mallorca,nan,Spain,40.0,3.0
+141,141,Auckland,nan,New Zealand,-37.0,175.0
+142,142,London,nan,United Kingdom,52.0,-0.0
+143,143,Stockholm,nan,Sweden,59.0,18.0
+144,144,Manila,nan,Philippines,15.0,121.0
+145,145,Munich,nan,Germany,48.0,12.0
+146,146,Boston,nan,United States,42.0,-71.0
+147,147,Calgary,nan,Canada,51.0,-114.0
+148,148,Marseille,nan,France,43.0,5.0
+149,149,Cologne,nan,Germany,51.0,7.0
+150,150,Cologne,nan,Germany,51.0,7.0
+151,151,Dusseldorf,nan,Germany,51.0,7.0
+152,152,Dusseldorf,nan,Germany,51.0,7.0
+153,153,Amsterdam,nan,Netherlands,52.0,5.0
+154,154,Hvar,nan,Croatia,43.0,17.0
+155,155,Abu Dhabi,nan,United Arab Emirates,24.0,54.0
+156,156,Helsinki,nan,Finland,60.0,25.0
+157,157,Frankfurt,nan,Germany,50.0,9.0
+158,158,Vientiane,nan,Laos,18.0,103.0
+159,159,Stuttgart,nan,Germany,49.0,9.0
+160,160,Hannover,nan,Germany,52.0,10.0
+161,161,Copenhagen,nan,Denmark,56.0,13.0
+162,162,Dresden,nan,Germany,51.0,14.0
+163,163,Rotterdam,nan,Netherlands,52.0,4.0
+164,164,La Paz,nan,Bolivia,-16.0,-68.0
+165,165,Ottawa,nan,Canada,45.0,-76.0
+166,166,Edinburgh,nan,United Kingdom,56.0,-3.0
+167,167,Oslo,nan,Norway,60.0,11.0
+168,168,Glasgow,nan,United Kingdom,56.0,-4.0
+169,169,Belfast,nan,United Kingdom,55.0,-6.0
+170,170,Salzburg,nan,Austria,48.0,13.0
+171,171,Zurich,nan,Switzerland,47.0,9.0
+172,172,Geneva,nan,Switzerland,46.0,6.0
+173,173,Valletta,nan,Malta,36.0,15.0
