@@ -11,8 +11,13 @@ engine = create_engine(os.getenv('DATABASE_URI'))
 
 Base.prepare(engine,reflect=True)
 
-# Add X = Base.classes.x where x is the table name in SQL
-
+# Save table references
+Activities = Base.classes.activities
+CountryFlags = Base.classes.countryFlags
+Locations = Base.classes.locations
+SunHours = Base.classes.sunHours
+Temperature = Base.classes.temperature
+ActivityList = Base.classes.activityList
 
 # Bind Session
 session = Session(engine)
@@ -25,18 +30,6 @@ app = Flask(__name__)
 def index():
     return 'Hello, World!! The Honeymooners have arrived!!'
 
-
-#return
-# @app.route('/')
-# def index():
-    #### insert the data being queried. See example:
-##     cols = ['id', 'val']
-##     data = session.query(Test).all()
-##     result = [{col: getattr(d, col) for col in cols} for d in data]
-##     return jsonify(result=result)
-
-#     return "Honeymoon Dashboard" ## Change this to return a jsonified result
-
-# if __name__ == '__main__':
-# #     app.run(debug=True)
-#     app:app
+@app.route('/api/get_all')
+def getdata():
+    return jsonify(**Activities.json,**CountryFlags.json,**Locations.json,**SunHours.json,**Temperature.json,**ActivityList.json)
