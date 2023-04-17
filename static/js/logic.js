@@ -30,7 +30,7 @@ function initMap(allData){
             layer.bindPopup("hi!")////////INSERT POPUP INFO HERE////////)  
         },
     }).addTo(myMap);
-    
+};
 
 
 
@@ -41,27 +41,41 @@ function updateCharts(){
     let costDropdown = d3.select('#costSelect').property("value");
     let tempDropdown = d3.select('#tempSelect').property("value");
     let sunDropdown = d3.select('#sunSelect').property("value");
-    // 
+
+    // clear all markers from map
+    eachLayer(removeLayer)
+
+    // add new markers based on filters
+    L.geoJSON(allData,{
+        pointToLayer: function(feature,latlng){
+            return L.marker(latlng);
+        },
+        
+    });
 };
 
 // initialize top destinations
 function initDestinations(){
+// choose the top destinations 
 
 };
 
 // initialize top activities
 
 function initActivities(){
-
+//////create the top 5 activities to have on start-up
 };
 
 
 // update top activities
-function updateActivities(){
-
+function updateActivities(location){
+    /// get activities based on latlng combo
 };
 
+
 /////////////////////////////////////////////////////////////////////////
+
+
 // Create function for changed month
 function monthChanged(){
     updateCharts()
@@ -80,13 +94,16 @@ function sunChanged(){
     updateCharts()
 };
 
+
 //////////////////////////////////////////////////////////////////////////
+
+
 // data promise
 d3.json(url).then(function(data){
     // confirm data loaded successfully
     console.log(data);
     // separate out needed data
-    allData = ;
+    allData = //INSERT DATA HERE//;
     // initialize map
     initMap(allData);
     // initialize top destinations
