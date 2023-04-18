@@ -37,7 +37,7 @@ def getdata():
     # Activities
     activitySearch = session.query(Activities).all()
     activityResults = []
-    for location,act1,act2,act3,act4,act5 in activitySearch:
+    for location, act1, act2, act3, act4, act5 in activitySearch:
         act_dict = {}
         act_dict["location"] = location
         act_dict["act1"] = act1
