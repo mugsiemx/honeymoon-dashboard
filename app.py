@@ -46,10 +46,8 @@ def getdata():
         act_dict["act4"] = Activity4
         act_dict["act5"] = Activity5
         activityResults.append(act_dict)
-    session.close()
-       
+        
     # Activity List
-    session = Session(engine)
     activityListSearch = session.query(ActivityList.ActivityID, ActivityList.Image, ActivityList.Attribution, ActivityList.Link).all()
     activityListResults = []
     for ActivityID, Image, Attribution, Link in activityListResults:
@@ -59,7 +57,7 @@ def getdata():
         actlist_dict["attribution"] = Attribution
         actlist_dict["link"] = Link
         activityListResults.append(actlist_dict)
-    session.close()
+
     # Locations
     LocationSearch = session.query(Locations.LocationID,Locations.City,Locations.Locality,Locations.Country,Locations.Latitude,Locations.Longitude).all()
     locationResults = []
@@ -71,6 +69,7 @@ def getdata():
         location_dict["country"] = Country
         location_dict["coords"] = {"Latitude": Latitude,"Longitude": Longitude}
         locationResults.append(location_dict)
+
     # Country Flags
     FlagSearch = session.query(CountryFlags.Country, CountryFlags.Image, CountryFlags.Attribution).all()
     FlagResults = []
@@ -79,7 +78,8 @@ def getdata():
         flag_dict["country"] = Country
         flag_dict["image"] = Image
         flag_dict["attribution"] = Attribution
-        flagResults.append(flag_dict)
+        FlagResults.append(flag_dict)
+
     # Sun Hours
     SunSearch = session.query(SunHours.LocationID,SunHours.January,SunHours.February,SunHours.March,SunHours.April,SunHours.May,SunHours.June,SunHours.July,SunHours.August,SunHours.September,SunHours.October,SunHours.November,SunHours.December).all()
     SunResults = []
