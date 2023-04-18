@@ -2,7 +2,7 @@
 Ideal Honeymoon Destinations Dashboard
 ![Honeymoon Image]()
 ## Technologies Utilized
-Python, Jupyter Notebook, Javascript, Quick DBD, Postgresql, Flask, HTML, CSS 
+Python, Jupyter Notebook, Javascript, Quick DBD, Postgresql, Flask, HTML, CSS, Render.com, Canva, ChatGPT
 
 ## Resources
 ## Team Collaboration
