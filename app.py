@@ -4,7 +4,6 @@ from flask import Flask, jsonify
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.automap import automap_base
-from flask_cors import CORS
 from flask_cors import cross_origin
 
 engine = create_engine(os.getenv('DATABASE_URI'))
