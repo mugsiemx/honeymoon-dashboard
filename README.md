@@ -1,4 +1,4 @@
-### honeymoon-dashboard
+# honeymoon-dashboard
 Ideal Honeymoon Destinations Dashboard
 ![pexels-photo-4942863](https://user-images.githubusercontent.com/115373233/232637418-e6a8f7f8-cdf6-44f2-82c9-5640619ed735.jpeg)
 
@@ -28,7 +28,7 @@ Python, Jupyter Notebook, Javascript, Quick DBD, Postgresql, Flask, HTML, CSS, R
 ## Data Exploration, Other
 -https://chat.openai.com/ for requirements to find information and files which would help with our research. Also used for a small data searches where specific information was missing for a small number of localities.
 
-##From Ideation to Realization:
-A sketch of our product idea:
+## From Ideation to Realization:
+-A sketch of our product idea:
 ![Website Sketch](https://user-images.githubusercontent.com/115373233/232637272-dc074f41-8dcc-4c4f-96be-a50c81bb0730.png)
-An image of our online dashboard:
+-An image of our online dashboard:
