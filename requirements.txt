@@ -2,4 +2,4 @@ Flask
 Gunicorn
 sqlalchemy
 psycopg2
-from flask_cors import cross_origin
+flask-cors
