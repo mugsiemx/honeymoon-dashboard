@@ -1,5 +1,5 @@
 // Pull in data
-const url = "";
+const url = "https://honeymoon-dashboard-slgw.onrender.com/api/get_all";
 
 // Initialize Map
 function initMap(allData){
