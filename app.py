@@ -50,7 +50,7 @@ def getdata():
     # Activity List
     activityListSearch = session.query(ActivityList.ActivityID, ActivityList.Image, ActivityList.Attribution, ActivityList.Link).all()
     activityListResults = []
-    for ActivityID, Image, Attribution, Link in activityListResults:
+    for ActivityID, Image, Attribution, Link in activityListSearch:
         actlist_dict = {}
         actlist_dict["activityID"] = ActivityID
         actlist_dict["image"] = Image
@@ -61,7 +61,7 @@ def getdata():
     # Locations
     LocationSearch = session.query(Locations.LocationID,Locations.City,Locations.Locality,Locations.Country,Locations.Latitude,Locations.Longitude).all()
     locationResults = []
-    for LocationID, City, Locality, Country, Latitude, Longitude in locationResults:
+    for LocationID, City, Locality, Country, Latitude, Longitude in LocationSearch:
         location_dict = {}
         location_dict["locationID"] = LocationID
         location_dict["city"] = City
@@ -73,7 +73,7 @@ def getdata():
     # Country Flags
     FlagSearch = session.query(CountryFlags.Country, CountryFlags.Image, CountryFlags.Attribution).all()
     FlagResults = []
-    for Country, Image, Attribution in locationResults:
+    for Country, Image, Attribution in FlagSearch:
         flag_dict = {}
         flag_dict["country"] = Country
         flag_dict["image"] = Image
@@ -83,7 +83,7 @@ def getdata():
     # Sun Hours
     SunSearch = session.query(SunHours.LocationID,SunHours.January,SunHours.February,SunHours.March,SunHours.April,SunHours.May,SunHours.June,SunHours.July,SunHours.August,SunHours.September,SunHours.October,SunHours.November,SunHours.December).all()
     SunResults = []
-    for LocationID, January, February, March, April, May, June, July, August, September, October, November, December in SunResults:
+    for LocationID, January, February, March, April, May, June, July, August, September, October, November, December in SunSearch:
         sun_dict = {}
         sun_dict["locationID"] = LocationID
         sun_dict["Jan"] = January
@@ -102,7 +102,7 @@ def getdata():
     # Temperature
     TempSearch = session.query(Temperature.LocationID,Temperature.January,Temperature.February,Temperature.March,Temperature.April,Temperature.May,Temperature.June,Temperature.July,Temperature.August,Temperature.September,Temperature.October,Temperature.November,Temperature.December).all()
     TempResults = []
-    for LocationID, January, February, March, April, May, June, July, August, September, October, November, December in TempResults:
+    for LocationID, January, February, March, April, May, June, July, August, September, October, November, December in TempSearch:
         temp_dict = {}
         temp_dict["locationID"] = LocationID
         temp_dict["Jan"] = January
