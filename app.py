@@ -46,7 +46,10 @@ def getdata():
         act_dict["act4"] = Activity4
         act_dict["act5"] = Activity5
         activityResults.append(act_dict)
+    session.close()
+       
     # Activity List
+    session = Session(engine)
     activityListSearch = session.query(ActivityList.ActivityID, ActivityList.Image, ActivityList.Attribution, ActivityList.Link).all()
     activityListResults = []
     for ActivityID, Image, Attribution, Link in activityListResults:
@@ -56,6 +59,7 @@ def getdata():
         actlist_dict["attribution"] = Attribution
         actlist_dict["link"] = Link
         activityListResults.append(actlist_dict)
+    session.close()
     # Locations
     LocationSearch = session.query(Locations.LocationID,Locations.City,Locations.Locality,Locations.Country,Locations.Latitude,Locations.Longitude).all()
     locationResults = []
