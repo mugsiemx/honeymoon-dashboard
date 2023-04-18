@@ -4,6 +4,8 @@ from flask import Flask, jsonify
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.automap import automap_base
+from flask_cors import CORS
+from flask_cors import cross_origin
 
 engine = create_engine(os.getenv('DATABASE_URI'))
 
@@ -28,11 +30,13 @@ app = Flask(__name__)
 
 # #test
 @app.route('/')
+@cross_origin()
 def welcome():
     return 'Welcome to our API!! Use /api/get_all to get all JSON data'
 
 @app.route('/api/get_all')
-def getdata():
+@cross_origin()
+def getdata():    
     session = Session(engine)
     # Activities
     activitySearch = session.query(Activities.LocationID, Activities.Activity1,Activities.Activity2,Activities.Activity3,Activities.Activity4,Activities.Activity5).all()
