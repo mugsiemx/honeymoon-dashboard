@@ -32,3 +32,6 @@ Python, Jupyter Notebook, Javascript, Quick DBD, Postgresql, Flask, HTML, CSS, R
 - A sketch of our product idea:
 ![Website Sketch](https://user-images.githubusercontent.com/115373233/232637272-dc074f41-8dcc-4c4f-96be-a50c81bb0730.png)
 - An image of our online dashboard:
+
+##Learn More About Our Project 
+- https://www.canva.com/design/DAFgYskWFwg/zEHB-op_96X-1yfTB0Y9yg/edit?utm_source=shareButton&utm_medium=email&utm_campaign=designshare
