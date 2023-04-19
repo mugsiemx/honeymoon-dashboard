@@ -11,6 +11,7 @@ engine = create_engine(os.getenv('DATABASE_URI'))
 Base = automap_base()
 
 Base.prepare(engine,reflect=True)
+print(Base.classes.keys())
 
 # Save table references
 Activities = Base.classes.fullactivities
