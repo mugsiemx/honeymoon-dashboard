@@ -34,7 +34,8 @@
     @media screen and (max-width:767px){
       .row.content{height:auto;}
     }
-    #map {height: 500px;}
+    #map {height: 450px;
+          width:  100%;}
   </style>
 </head>
 
@@ -49,18 +50,18 @@
             <div class="container">
                 <select id="monthSelect" onchange="monthChanged(this.value)">
                   <option value="all">All</option>
-                  <option value="1">January</option>
-                  <option value="2">February</option>
-                  <option value="3">March</option>
-                  <option value="4">April</option>
-                  <option value="5">May</option>
-                  <option value="6">June</option>
-                  <option value="7">July</option>
-                  <option value="8">August</option>
-                  <option value="9">September</option>
-                  <option value="10">October</option>
-                  <option value="11">November</option>
-                  <option value="12">December</option>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
                 </select>  
               </div>
            </li>
@@ -75,7 +76,7 @@
                 <option value="five">$$$$$</option>
               </select> 
         <!-- ADD IMAGE SOURCES AND ALT TEXT HERE -->
-              <img src="DollarSign.jpg" onclick="openModal();currentSlide(1)" class="rounded float left" alt=" image of dollar signs" width ="100" height = "100" align="left" >
+              <img src="Images/DollarSign.jpg" onclick="openModal();currentSlide(1)" class="rounded float left" alt=" image of dollar signs" width ="100" height = "100" align="left" >
             </div>
             </li>
             <li class="well"><h4>Temperature</h4>
@@ -89,7 +90,7 @@
                   <option value="100">Over 80&#176 F</option>
                 </select> 
           <!-- ADD IMAGE SOURCES AND ALT TEXT HERE -->
-                <img src="Thermometer.jpg" onclick="openModal();currentSlide(2)" class="rounded float left" alt=" image of thermometer" width ="100" height = "100"align="left">
+                <img src="Images/Thermometer.jpg" onclick="openModal();currentSlide(2)" class="rounded float left" alt=" image of thermometer" width ="100" height = "100"align="left">
               </div>
               </li>
               <li class="well"><h4>Sunny Days</h4>
@@ -103,7 +104,7 @@
                     <option value="five">70-100%</option>
                   </select> 
             <!-- ADD IMAGE SOURCES AND ALT TEXT HERE -->
-                  <img src="Sunshine.jpg" onclick="openModal();currentSlide(3)"class="rounded float left" alt=" image of sunshine" width ="100" height = "100" align="left">
+                  <img src="Images/Sunshine.jpg" onclick="openModal();currentSlide(3)"class="rounded float left" alt=" image of sunshine" width ="100" height = "100" align="left">
                 </div>
                 </li>
         </ul><br>
@@ -115,7 +116,7 @@
           <h1>Honeymoon Dashboard</h1>
         </div>
         <!-- MAP DIV -->
-        <div class="well well-lg">
+        <div class="well">
           <div id="map">
             </div>
 
@@ -131,41 +132,35 @@
                   <h4>Top Destinations</h4>
                   <tr>
                     <th scope="col">Flag</th>
+                    <th scope="col">City</th>
                     <th scope="col">Country</th>
-                    <th scope="col">Cost</th>
-                    <th scope="col">Ranking</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row"><img src="" class="rounded float left" alt="country flag" width ="100" height = "100"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                  <tr id="dest1">
+                    <td  scope="row"><img id="flag1" src="Images/Blank.jpg" class="rounded float left" alt="country flag" width ="50" height = "50"></td>
+                    <td id="1.1"></td>
+                    <td id="1.2"></td>
                   </tr>
-                  <tr>
-                    <th scope="row"><img src="" class="rounded float left" alt="country flag" width ="100" height = "100"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                  <tr id="dest2">
+                    <td  scope="row"><img id="flag2" src="Images/Blank.jpg" class="rounded float left" alt="country flag" width ="50" height = "50"></td>
+                    <td id="2.1"></td>
+                    <td id="2.2"></td>
                   </tr>
-                  <tr>
-                    <th scope="row"><img src="" class="rounded float left" alt="country flag" width ="100" height = "100"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                  <tr id="dest3">
+                    <td scope="row"><img id="flag3" src="Images/Blank.jpg" class="rounded float left" alt="country flag" width ="50" height = "50"></td>
+                    <td id="3.1"></td>
+                    <td id="3.2"></td>
                   </tr>
-                  <tr>
-                    <th scope="row"><img src="" class="rounded float left" alt="country flag" width ="100" height = "100"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                  <tr id="dest4">
+                    <td scope="row"><img id="flag4" src="Images/Blank.jpg" class="rounded float left" alt="country flag" width ="50" height = "50"></td>
+                    <td id="4.1"></td>
+                    <td id="4.2"></td>
                   </tr>
-                  <tr>
-                    <th scope="row"><img src="" class="rounded float left" alt="country flag" width ="100" height = "100"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                  <tr id="dest5">
+                    <td scope="row"><img id="flag5" src="Images/Blank.jpg" class="rounded float left" alt="country flag" width ="50" height = "50"></td>
+                    <td id="5.1"></td>
+                    <td id="5.2"></td>
                   </tr>
                 </tbody>
               </table>
@@ -173,25 +168,25 @@
           </div>
           <div class="col-sm-4">
             <div class="well">
-              <p>TOP 5 ACTIVITIES</p> 
+              <h4>Top Activities</h4> 
               <div class="row">
-                <img src="" class="rounded pull-left" alt="activity1">
-                <img src="" class="rounded pull-right" alt="activity2">
+                <img id="act1" src="Images/Blank.jpg" class="rounded pull-left" alt="activity1" width = "100" height="100">
+                <img id= "act2" src="Images/Blank.jpg" class="rounded pull-right" alt="activity2" width = "100" height="100">
                 <br>
-                <div class="pull-left">Left Caption</div>
-                <div class="pull-right">Right Caption</div>
+                <div id="caption1" class="pull-left">Left Caption</div>
+                <div id="caption2" class="pull-right">Right Caption</div>
               </div>
               <div class="row text-center">
-                <img src="" class="rounded" style="margin:0 auto;" alt="activity3">
+                <img id= "act3" src="Images/Blank.jpg" class="rounded" style="margin:0 auto;" alt="activity3" width = "100" height="100">
                 <br>
-                <p class="text-center">Center caption</p>
+                <p id="caption3" class="text-center">Center caption</p>
               </div>
               <div class="row">
-                <img src="" class="rounded pull-left" alt="activity4">
-                <img src="" class="rounded pull-right" alt="activity5">
+                <img id="act4" src="Images/Blank.jpg" class="rounded pull-left" alt="activity4" width = "100" height="100">
+                <img id="act5" src="Images/Blank.jpg" class="rounded pull-right" alt="activity5" width = "100" height="100">
                 <br>
-                <div class="pull-left">Left Caption</div>
-                <div class="pull-right">Right Caption</div>
+                <div id="caption4" class="pull-left">Left Caption</div>
+                <div id="caption5" class="pull-right">Right Caption</div>
               </div>
             </div>
           </div>

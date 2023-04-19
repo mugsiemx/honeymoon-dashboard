@@ -7,10 +7,10 @@ from sqlalchemy import MetaData
 from sqlalchemy.ext.automap import automap_base
 from flask_cors import cross_origin
 
-engine = create_engine(os.getenv('DATABASE_URI'))
-meta = MetaData()
-MetaData.reflect(meta,bind=engine)
-meta.create_all(engine)
+engine = create_engine(os.getenv('DATABASE_URI'),pool_size=10,max_overflow=-1)
+# meta = MetaData()
+# MetaData.reflect(meta,bind=engine)
+# meta.create_all(engine)
 
 
 Base = automap_base()
@@ -42,8 +42,8 @@ def getdata():
     locationIDs = []
     # Create list of IDs
     for LocationID in locationIDsearch:
-        locationIDs.append(LocationID)
-    
+        locationIDs.append(LocationID[0])
+    print(locationIDs)
     # Iterate through list of IDs to gather info for individual locations
     allData = []
     for ID in locationIDs:
@@ -52,8 +52,8 @@ def getdata():
             city = record.City
             country = record.Country
             locality = record.Locality
-            coordinates = [record.Latitude,record.Longitude]
-        activityInfo = session.query(Activities).filter_by(LocationID=ID).all()
+            coordinates = [record.Longitude,record.Latitude]
+        activityInfo = session.query(Activities).filter_by(LocationID = ID).all()
         activity_list = []
         for record in activityInfo:
             activity=record.activity
@@ -142,12 +142,13 @@ def getdata():
                         }
                         },
                   "geometry": {
-                        "type":"point",
-                        "coordinates":[coordinates]
+                        "type":"Point",
+                        "coordinates":coordinates
                         }
                 }
         allData.append(idData)
-    return jsonify(allData)
+    jsonData = {"type":"FeatureCollection","features":allData}
+    return jsonify(jsonData)
 
 
 if __name__ == "__main__":
