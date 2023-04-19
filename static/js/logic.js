@@ -3,7 +3,7 @@ const url = "https://honeymoon-dashboard-slgw.onrender.com/api/get_all";
 
 // Initialize Map
 function initMap(data){
-    var myMap = L.map("map",{
+    myMap = L.map("map",{
         center: [
                         37.09, -95.71,
                     ],
@@ -14,7 +14,7 @@ function initMap(data){
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(myMap);
    // create markers for all datapoints
-    L.geoJSON(data,{
+    layer = L.geoJSON(data,{
         // create the points
         pointToLayer: function(feature,latlng){
             return L.marker(latlng);
@@ -43,7 +43,7 @@ function updateCharts(){
     let sunDropdown = d3.select('#sunSelect').property("value");
 
     // clear all markers from map
-    eachLayer(removeLayer)
+    layer.removeFrom(myMap)
     // create new dataset
     function tempFilter(feature){
         if(tempDropdown = "all") return true
@@ -73,6 +73,7 @@ function updateCharts(){
     function allFilter(feature){
         if (tempFilter(feature) == true & sunFilter(feature) == true) return true
     }
+    console.log(allData)
     // add new markers based on filters
     L.geoJSON(allData,{
         filter: allFilter,
@@ -129,6 +130,7 @@ function sunChanged(){
 
 // data promise
 d3.json(url).then(function(data){
+    allData = Object.values(data.features)
     // confirm data loaded successfully
     console.log(data);
     // initialize map
