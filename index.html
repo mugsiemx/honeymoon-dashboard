@@ -46,7 +46,7 @@
       <div class="col-sm-3 sidenav">
         <ul class="nav nav-pills nav-stacked">
           <li class="well">
-            <h3>What month is your trip?</h3>
+            <h3 style="margin: 0;">What month is your trip?</h3>
             <div class="container">
                 <select id="monthSelect" onchange="monthChanged(this.value)">
                   <option value="all">All</option>
@@ -65,9 +65,9 @@
                 </select>  
               </div>
            </li>
-          <li class="well"><h4>Cost</h4>
+          <li class="well"><h4 style="margin: 0;">Cost</h4>
             <div class="container">
-              <select id="costSelect" onchange="costChanged(this.value)">
+              <select id="costSelect" onchange="costChanged(this.value)" style="width: 100px;">
                 <option value="all">All</option>
                 <option value="one">$</option>
                 <option value="two">$$</option>
@@ -79,11 +79,11 @@
               <img src="Images/DollarSign.jpg" onclick="openModal();currentSlide(1)" class="rounded float left" alt=" image of dollar signs" width ="100" height = "100" align="left" >
             </div>
             </li>
-            <li class="well"><h4>Temperature</h4>
+            <li class="well"><h4 style="margin: 0;">Temperature</h4>
               <div class="container">
-                <select id="tempSelect" onchange="tempChanged(this.value)">
+                <select id="tempSelect" onchange="tempChanged(this.value)"style="width: 100px;">
                   <option value="all">All</option>
-                  <option value="32">Below Freezing</option>
+                  <option value="32">Under 32&#176F</option>
                   <option value="50">32-50&#176 F</option>
                   <option value="70">50 - 70&#176 F</option>
                   <option value="80">70 - 80&#176 F</option>
@@ -93,9 +93,9 @@
                 <img src="Images/Thermometer.jpg" onclick="openModal();currentSlide(2)" class="rounded float left" alt=" image of thermometer" width ="100" height = "100"align="left">
               </div>
               </li>
-              <li class="well"><h4>Sunny Days</h4>
+              <li class="well"><h4 style="margin: 0;">Sunny Days</h4>
                 <div class="container">
-                  <select id="sunSelect" onchange="sunChanged(this.value)">
+                  <select id="sunSelect" onchange="sunChanged(this.value)"style="width: 100px;">
                     <option value="all">All</option>
                     <option value="one">Under 10%</option>
                     <option value="two">10-30%</option>
@@ -111,9 +111,9 @@
       </div>
       <br>
       
-      <div class="col-sm-9">
-        <div class="page-header">
-          <h1>Honeymoon Dashboard</h1>
+      <div class="col-sm-9 text-center">
+        <div class="page-header" style="height: 50px; padding-top:5px; padding-bottom: 10px;">
+          <h1 stylel="margin-top: 50;">Honeymoon Dashboard</h1>
         </div>
         <!-- MAP DIV -->
         <div class="well">
