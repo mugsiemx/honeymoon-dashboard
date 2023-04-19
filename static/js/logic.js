@@ -49,30 +49,7 @@ function updateCharts(){
     try{filteredlayer.removeFrom(myMap)}
     catch (error){}
 
-    // create new dataset
-    // function tempFilter(feature){
-    //     if(tempDropdown === "all") return true
-    //     else if(tempDropdown === "32") min = -10, max = 32
-    //     else if (tempDropdown === "50") min = 32, max = 50
-    //     else if (tempDropdown === "70") min = 50, max = 70
-    //     else if (tempDropdown === "80") min = 70, max = 80
-    //     else if (tempDropdown === "100") min = 80, max = 100
-
-    //     if(feature.properties.avgTemp[monthDropdown] < max & feature.properties.avgTemp[monthDropdown]> min) return true
-    // }
-    // function sunFilter(feature){
-    //     if(sunDropdown === "all") return true
-    //     else if(sunDropdown ==="one") min = 0, max = (30*.1)
-    //     else if (sunDropdown === "two") min = (30*.1), max = (30*.3)
-    //     else if (sunDropdown === "three") min = (30*.3), max = (30*.5)
-    //     else if (sunDropdown === "four") min = (30*.5), max = (30*.7)
-    //     else if (sunDropdown === "five") min = (30*.7), max = 35
-
-    //    if(feature.properties.sunDays[monthDropdown] < max & feature.properties.sunDays[monthDropdown]> min) return true
-    // }
-// /////////////////////// can't make filters work ////////////////////////////
-    console.log(tempDropdown)
-    console.log(sunDropdown)    
+    // Filter the data based on the dropdowns
     function allFilter(feature){
         if(tempDropdown === "all") var temp=true
         else if(tempDropdown === "32") Tmin = -10, Tmax = 32
@@ -96,7 +73,8 @@ function updateCharts(){
     
         if(temp===true & sun===true) return true
     }
-    console.log(allData)
+    console.log()
+    locationList = []
     // add new markers based on filters
     filteredlayer = L.geoJSON(allData,{
         filter: allFilter,
@@ -111,10 +89,12 @@ function updateCharts(){
                 },
             });
             // Create a popup for each location with relevant info
-            layer.bindPopup(feature.properties.name.city + ", " + feature.properties.name.country)////////INSERT POPUP INFO HERE////////)  
-        },
-        
+            layer.bindPopup(feature.properties.name.city + ", " + feature.properties.name.country);
+            locationList.push(feature.properties)  
+        },    
         }).addTo(myMap);
+    // location #1
+    updateDestinations(locationList)
 };
 
 // initialize top destinations
@@ -325,6 +305,105 @@ function updateActivities(location){
         document.getElementById("caption5").innerHTML = activitySample[0].name
         document.getElementById("caption5").setAttribute('href',activitySample[0].link)} 
 };          
+
+function updateDestinations(data){
+    if(data.length ===0){
+        document.getElementById("flag1").src = "Images/house.jpg"
+        document.getElementById("1.1").innerHTML = "Stay"
+        document.getElementById("1.2").innerHTML = "Home"
+        document.getElementById("flag2").src = "Images/house.jpg"
+        document.getElementById("2.1").innerHTML = "Stay"
+        document.getElementById("2.2").innerHTML = "Home"
+        document.getElementById("flag3").src = "Images/house.jpg"
+        document.getElementById("3.1").innerHTML = "Stay"
+        document.getElementById("3.2").innerHTML = "Home"
+        document.getElementById("flag4").src = "Images/house.jpg"
+        document.getElementById("4.1").innerHTML = "Stay"
+        document.getElementById("4.2").innerHTML = "Home"
+        document.getElementById("flag5").src = "Images/house.jpg"
+        document.getElementById("5.1").innerHTML = "Stay"
+        document.getElementById("5.2").innerHTML = "Home"    }        
+    else if(data.length === 1){
+        document.getElementById("flag1").src = "Images/"+data[0].flag.image
+        document.getElementById("1.1").innerHTML = data[0].name.city
+        document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("flag2").src = "Images/house.jpg"
+        document.getElementById("2.1").innerHTML = "Stay"
+        document.getElementById("2.2").innerHTML = "Home"
+        document.getElementById("flag3").src = "Images/house.jpg"
+        document.getElementById("3.1").innerHTML = "Stay"
+        document.getElementById("3.2").innerHTML = "Home"
+        document.getElementById("flag4").src = "Images/house.jpg"
+        document.getElementById("4.1").innerHTML = "Stay"
+        document.getElementById("4.2").innerHTML = "Home"
+        document.getElementById("flag5").src = "Images/house.jpg"
+        document.getElementById("5.1").innerHTML = "Stay"
+        document.getElementById("5.2").innerHTML = "Home" }
+    else if(data.length === 2){
+        document.getElementById("flag1").src = "Images/"+data[0].flag.image
+        document.getElementById("1.1").innerHTML = data[0].name.city
+        document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("flag2").src = "Images/"+data[1].flag.image
+        document.getElementById("2.1").innerHTML = data[1].name.city
+        document.getElementById("2.2").innerHTML = data[1].name.country
+        document.getElementById("flag3").src = "Images/house.jpg"
+        document.getElementById("3.1").innerHTML = "Stay"
+        document.getElementById("3.2").innerHTML = "Home"
+        document.getElementById("flag4").src = "Images/house.jpg"
+        document.getElementById("4.1").innerHTML = "Stay"
+        document.getElementById("4.2").innerHTML = "Home"
+        document.getElementById("flag5").src = "Images/house.jpg"
+        document.getElementById("5.1").innerHTML = "Stay"
+        document.getElementById("5.2").innerHTML = "Home" } 
+    else if(data.length === 3){
+        document.getElementById("flag1").src = "Images/"+data[0].flag.image
+        document.getElementById("1.1").innerHTML = data[0].name.city
+        document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("flag2").src = "Images/"+data[1].flag.image
+        document.getElementById("2.1").innerHTML = data[1].name.city
+        document.getElementById("2.2").innerHTML = data[1].name.country
+        document.getElementById("flag3").src = "Images/"+data[2].flag.image
+        document.getElementById("3.1").innerHTML = data[2].name.city
+        document.getElementById("3.2").innerHTML = data[2].name.country
+        document.getElementById("flag4").src = "Images/house.jpg"
+        document.getElementById("4.1").innerHTML = "Stay"
+        document.getElementById("4.2").innerHTML = "Home"
+        document.getElementById("flag5").src = "Images/house.jpg"
+        document.getElementById("5.1").innerHTML = "Stay"
+        document.getElementById("5.2").innerHTML = "Home" } 
+    else if(data.length === 4){
+        document.getElementById("flag1").src = "Images/"+data[0].flag.image
+        document.getElementById("1.1").innerHTML = data[0].name.city
+        document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("flag2").src = "Images/"+data[1].flag.image
+        document.getElementById("2.1").innerHTML = data[1].name.city
+        document.getElementById("2.2").innerHTML = data[1].name.country
+        document.getElementById("flag3").src = "Images/"+data[2].flag.image
+        document.getElementById("3.1").innerHTML = data[2].name.city
+        document.getElementById("3.2").innerHTML = data[2].name.country
+        document.getElementById("flag4").src = "Images/"+data[3].flag.image
+        document.getElementById("4.1").innerHTML = data[3].name.city
+        document.getElementById("4.2").innerHTML = data[3].name.country
+        document.getElementById("flag5").src = "Images/house.jpg"
+        document.getElementById("5.1").innerHTML = "Stay"
+        document.getElementById("5.2").innerHTML = "Home" }
+    else if(data.length >4){
+        document.getElementById("flag1").src = "Images/"+data[0].flag.image
+        document.getElementById("1.1").innerHTML = data[0].name.city
+        document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("flag2").src = "Images/"+data[1].flag.image
+        document.getElementById("2.1").innerHTML = data[1].name.city
+        document.getElementById("2.2").innerHTML = data[1].name.country
+        document.getElementById("flag3").src = "Images/"+data[2].flag.image
+        document.getElementById("3.1").innerHTML = data[2].name.city
+        document.getElementById("3.2").innerHTML = data[2].name.country
+        document.getElementById("flag4").src = "Images/"+data[3].flag.image
+        document.getElementById("4.1").innerHTML = data[3].name.city
+        document.getElementById("4.2").innerHTML = data[3].name.country
+        document.getElementById("flag5").src = "Images/"+data[4].flag.image
+        document.getElementById("5.1").innerHTML = data[4].name.city
+        document.getElementById("5.2").innerHTML = data[4].name.country }        
+};
 
 
 /////////////////////////////////////////////////////////////////////////
