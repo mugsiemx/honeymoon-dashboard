@@ -23,7 +23,7 @@ function initMap(data){
             // Update the top activities based on the location that is clicked
             layer.on({
                 click: function(event){
-                    updateActivities(event.target());
+                    updateActivities(event.target);
                 },
             });
             // Create a popup for each location with relevant info

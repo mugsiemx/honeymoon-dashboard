@@ -52,7 +52,7 @@ def getdata():
             city = record.City
             country = record.Country
             locality = record.Locality
-            coordinates = [record.Latitude,record.Longitude]
+            coordinates = [record.Longitude,record.Latitude]
         activityInfo = session.query(Activities).filter_by(LocationID = ID).all()
         activity_list = []
         for record in activityInfo:
