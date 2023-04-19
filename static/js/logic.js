@@ -144,7 +144,6 @@ function initActivities(data){
 //////create the top 5 activities to have on start-up
 activities=data.features[0].properties.activities
 console.log(activities[0])
-
 // Image 1
 document.getElementById("act1").src= activities[0][0].image
 document.getElementById("act1").alt = activities[0][0].name
@@ -174,9 +173,141 @@ document.getElementById("caption5").setAttribute('href',activities[0][4].link)
 
 // update top activities
 function updateActivities(location){
-    /// get activities based on locationID
-    console.log(location)
-};
+    /// get activities
+    activitySample = location.feature.properties.activities[0]
+    console.log(activitySample.length)
+    if (activitySample.length == 5){
+    // Image 1
+        document.getElementById("act1").src= activitySample[0].image
+        document.getElementById("act1").alt = activitySample[0].name
+        document.getElementById("caption1").innerHTML = activitySample[0].name
+        document.getElementById("caption1").setAttribute('href',activitySample[0].link)
+        // Image 2
+        document.getElementById("act2").src= activitySample[1].image
+        document.getElementById("act2").alt = activitySample[1].name
+        document.getElementById("caption2").innerHTML = activitySample[1].name
+        document.getElementById("caption2").setAttribute('href',activitySample[1].link)
+        // Image 3
+        document.getElementById("act3").src= activitySample[2].image
+        document.getElementById("act3").alt = activitySample[2].name
+        document.getElementById("caption3").innerHTML = activitySample[2].name
+        document.getElementById("caption3").setAttribute('href',activitySample[2].link)
+        // Image 4
+        document.getElementById("act4").src= activitySample[3].image
+        document.getElementById("act4").alt = activitySample[3].name
+        document.getElementById("caption4").innerHTML = activitySample[3].name
+        document.getElementById("caption4").setAttribute('href',activitySample[3].link)
+        // Image 5
+        document.getElementById("act5").src= activitySample[4].image
+        document.getElementById("act5").alt = activitySample[4].name
+        document.getElementById("caption5").innerHTML = activitySample[4].name
+        document.getElementById("caption5").setAttribute('href',activitySample[4].link)}
+
+    else if (activitySample.length == 4){
+        // Image 1
+        document.getElementById("act1").src= activitySample[0].image
+        document.getElementById("act1").alt = activitySample[0].name
+        document.getElementById("caption1").innerHTML = activitySample[0].name
+        document.getElementById("caption1").setAttribute('href',activitySample[0].link)
+        // Image 2
+        document.getElementById("act2").src= activitySample[1].image
+        document.getElementById("act2").alt = activitySample[1].name
+        document.getElementById("caption2").innerHTML = activitySample[1].name
+        document.getElementById("caption2").setAttribute('href',activitySample[1].link)
+        // Image 3
+        document.getElementById("act3").src= activitySample[2].image
+        document.getElementById("act3").alt = activitySample[2].name
+        document.getElementById("caption3").innerHTML = activitySample[2].name
+        document.getElementById("caption3").setAttribute('href',activitySample[2].link)
+        // Image 4
+        document.getElementById("act4").src= activitySample[3].image
+        document.getElementById("act4").alt = activitySample[3].name
+        document.getElementById("caption4").innerHTML = activitySample[3].name
+        document.getElementById("caption4").setAttribute('href',activitySample[3].link)
+        // Image 5
+        document.getElementById("act5").src= activitySample[3].image
+        document.getElementById("act5").alt = activitySample[3].name
+        document.getElementById("caption5").innerHTML = activitySample[3].name
+        document.getElementById("caption5").setAttribute('href',activitySample[3].link)} 
+    else if (activitySample.length == 3){
+        // Image 1
+        document.getElementById("act1").src= activitySample[0].image
+        document.getElementById("act1").alt = activitySample[0].name
+        document.getElementById("caption1").innerHTML = activitySample[0].name
+        document.getElementById("caption1").setAttribute('href',activitySample[0].link)
+        // Image 2
+        document.getElementById("act2").src= activitySample[1].image
+        document.getElementById("act2").alt = activitySample[1].name
+        document.getElementById("caption2").innerHTML = activitySample[1].name
+        document.getElementById("caption2").setAttribute('href',activitySample[1].link)
+        // Image 3
+        document.getElementById("act3").src= activitySample[2].image
+        document.getElementById("act3").alt = activitySample[2].name
+        document.getElementById("caption3").innerHTML = activitySample[2].name
+        document.getElementById("caption3").setAttribute('href',activitySample[2].link)
+        // Image 4
+        document.getElementById("act4").src= activitySample[2].image
+        document.getElementById("act4").alt = activitySample[2].name
+        document.getElementById("caption4").innerHTML = activitySample[2].name
+        document.getElementById("caption4").setAttribute('href',activitySample[2].link)
+        // Image 5
+        document.getElementById("act5").src= activitySample[2].image
+        document.getElementById("act5").alt = activitySample[2].name
+        document.getElementById("caption5").innerHTML = activitySample[2].name
+        document.getElementById("caption5").setAttribute('href',activitySample[2].link)}                                            
+    else if (activitySample.length == 2){
+        // Image 1              
+        document.getElementById("act1").src= activitySample[0].image
+        document.getElementById("act1").alt = activitySample[0].name
+        document.getElementById("caption1").innerHTML = activitySample[0].name
+        document.getElementById("caption1").setAttribute('href',activitySample[0].link)
+        // Image 2
+        document.getElementById("act2").src= activitySample[1].image
+        document.getElementById("act2").alt = activitySample[1].name
+        document.getElementById("caption2").innerHTML = activitySample[1].name
+        document.getElementById("caption2").setAttribute('href',activitySample[1].link)
+        // Image 3
+        document.getElementById("act3").src= activitySample[1].image
+        document.getElementById("act3").alt = activitySample[1].name
+        document.getElementById("caption3").innerHTML = activitySample[1].name
+        document.getElementById("caption3").setAttribute('href',activitySample[1].link)
+        // Image 4
+        document.getElementById("act4").src= activitySample[1].image
+        document.getElementById("act4").alt = activitySample[1].name
+        document.getElementById("caption4").innerHTML = activitySample[1].name
+        document.getElementById("caption4").setAttribute('href',activitySample[1].link)
+        // Image 5
+        document.getElementById("act5").src= activitySample[1].image
+        document.getElementById("act5").alt = activitySample[1].name
+        document.getElementById("caption5").innerHTML = activitySample[1].name
+        document.getElementById("caption5").setAttribute('href',activitySample[1].link)} 
+    else if (activitySample.length == 1){
+        // Image 1
+        document.getElementById("act1").src= activitySample[0].image
+        document.getElementById("act1").alt = activitySample[0].name
+        document.getElementById("caption1").innerHTML = activitySample[0].name
+        document.getElementById("caption1").setAttribute('href',activitySample[0].link)
+        // Image 2
+        document.getElementById("act2").src= activitySample[0].image
+        document.getElementById("act2").alt = activitySample[0].name
+        document.getElementById("caption2").innerHTML = activitySample[0].name
+        document.getElementById("caption2").setAttribute('href',activitySample[0].link)
+        // Image 3
+        document.getElementById("act3").src= activitySample[0].image
+        document.getElementById("act3").alt = activitySample[0].name
+        document.getElementById("caption3").innerHTML = activitySample[0].name
+        document.getElementById("caption3").setAttribute('href',activitySample[0].link)
+        // Image 4
+        document.getElementById("act4").src= activitySample[0].image
+        document.getElementById("act4").alt = activitySample[0].name
+        document.getElementById("caption4").innerHTML = activitySample[0].name
+        document.getElementById("caption4").setAttribute('href',activitySample[0].link)
+        // Image 5
+        document.getElementById("act5").src= activitySample[0].image
+        document.getElementById("act5").alt = activitySample[0].name
+        document.getElementById("caption5").innerHTML = activitySample[0].name
+        document.getElementById("caption5").setAttribute('href',activitySample[0].link)} 
+};          
 
 
 /////////////////////////////////////////////////////////////////////////
