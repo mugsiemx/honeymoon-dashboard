@@ -53,7 +53,7 @@ def getdata():
         #     country = record.Country
         #     locality = record.Locality
         #     coordinates = [record.Latitude,record.Longitude]
-        activityInfo = session.query(Activities).filter_by(LocationID = ID).all()
+        activityInfo = session.query(Activities).filter_by(LocationID = ID[0]).all()
         activity_list = []
         for record in activityInfo:
             activity=record['activity']
