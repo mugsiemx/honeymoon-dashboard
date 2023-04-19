@@ -38,15 +38,44 @@ function initMap(data){
 function updateCharts(){
     // collect the new values of all dropdowns
     let monthDropdown = d3.select('#monthSelect').property("value");
-    let costDropdown = d3.select('#costSelect').property("value");
+    // let costDropdown = d3.select('#costSelect').property("value");
     let tempDropdown = d3.select('#tempSelect').property("value");
     let sunDropdown = d3.select('#sunSelect').property("value");
 
     // clear all markers from map
     eachLayer(removeLayer)
+    // create new dataset
+    function tempFilter(feature){
+        if(tempDropdown = "all") return true
+        else if(tempDropdown = "32") min = -10, max = 32
+        else if (tempDropdown = "50") min = 32, max = 50
+        else if (tempDropdown = "70") min = 50, max = 70
+        else if (tempDropdown = "80") min = 70, max = 80
+        else if (tempDropdown = "100") min = 80, max = 100
 
+        if(monthDropdown = 'all') 
+            if(average(feature.properties.avgTemp) < max & average(feature.properties.avgTemp) > min) return true
+        else if(feature.properties.avgTemp[monthDropdown] < max & feature.properties.avgTemp[monthDropdown]> min) return true
+    }
+    function sunFilter(feature){
+        if(sunDropdown = "all") return true
+        else if(sunDropdown = "one") min = 0, max = (30*.1)
+        else if (sunDropdown = "two") min = (30*.1), max = (30*.3)
+        else if (sunDropdown = "three") min = (30*.3), max = (30*.5)
+        else if (sunDropdown = "four") min = (30*.5), max = (30*.7)
+        else if (sunDropdown = "five") min = (30*.7), max = 35
+
+        if(monthDropdown = 'all') 
+            if(average(feature.properties.sunDays) < max & average(feature.properties.sunDays) > min) return true
+        else if(feature.properties.sunDays[monthDropdown] < max & feature.properties.sunDays[monthDropdown]> min) return true
+    }
+
+    function allFilter(feature){
+        if (tempFilter(feature) == true & sunFilter(feature) == true) return true
+    }
     // add new markers based on filters
     L.geoJSON(allData,{
+        filter: allFilter,
         pointToLayer: function(feature,latlng){
             return L.marker(latlng);
         },
