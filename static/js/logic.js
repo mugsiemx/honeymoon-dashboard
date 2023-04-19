@@ -1,18 +1,20 @@
 // Pull in data
 const url = "https://honeymoon-dashboard-slgw.onrender.com/api/get_all";
 
+myMap = L.map("map",{
+    center: [
+            37.09, -95.71,
+            ],
+    zoom: 1.5,
+});
+// add tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(myMap);
+
 // Initialize Map
 function initMap(data){
-    myMap = L.map("map",{
-        center: [
-                        37.09, -95.71,
-                    ],
-                    zoom: 1.5,
-      });
-    // add tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(myMap);
+
    // create markers for all datapoints
     layer = L.geoJSON(data,{
         // create the points
