@@ -142,7 +142,7 @@ def getdata():
                         }
                         },
                   "geometry": {
-                        "type":"point",
+                        "type":"Point",
                         "coordinates":coordinates
                         }
                 }
