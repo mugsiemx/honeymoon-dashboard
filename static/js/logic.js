@@ -109,6 +109,7 @@ for (var i=0; i<5;i++){
 locations.push(data.features[i].properties)
 }
 
+
 // location #1
 document.getElementById("flag1").src = "Images/"+locations[0].flag.image
 document.getElementById("1.1").innerHTML = locations[0].name.city
@@ -142,37 +143,39 @@ document.getElementById("5.2").innerHTML = locations[4].name.country
 function initActivities(data){
 //////create the top 5 activities to have on start-up
 activities=data.features[0].properties.activities
+console.log(activities[0])
 
 // Image 1
-document.getElementById("act1").src= activities[0].image
-document.getElementById("act1").alt = activities[0].name
-document.getElementById("caption1").innerHTML = activities[0].name
-document.getElementById("caption1").setAttribute('href',activities[0].link)
+document.getElementById("act1").src= activities[0][0].image
+document.getElementById("act1").alt = activities[0][0].name
+document.getElementById("caption1").innerHTML = activities[0][0].name
+document.getElementById("caption1").setAttribute('href',activities[0][0].link)
 // Image 2
-document.getElementById("act2").src= activities[1].image
-document.getElementById("act2").alt = activities[1].name
-document.getElementById("caption2").innerHTML = activities[1].name
-document.getElementById("caption2").setAttribute('href',activities[1].link)
+document.getElementById("act2").src= activities[0][1].image
+document.getElementById("act2").alt = activities[0][1].name
+document.getElementById("caption2").innerHTML = activities[0][1].name
+document.getElementById("caption2").setAttribute('href',activities[0][1].link)
 // Image 3
-document.getElementById("act3").src= activities[2].image
-document.getElementById("act3").alt = activities[2].name
-document.getElementById("caption3").innerHTML = activities[2].name
-document.getElementById("caption3").setAttribute('href',activities[2].link)
+document.getElementById("act3").src= activities[0][2].image
+document.getElementById("act3").alt = activities[0][2].name
+document.getElementById("caption3").innerHTML = activities[0][2].name
+document.getElementById("caption3").setAttribute('href',activities[0][2].link)
 // Image 4
-document.getElementById("act4").src= activities[3].image
-document.getElementById("act4").alt = activities[3].name
-document.getElementById("caption4").innerHTML = activities[3].name
-document.getElementById("caption4").setAttribute('href',activities[3].link)
+document.getElementById("act4").src= activities[0][3].image
+document.getElementById("act4").alt = activities[0][3].name
+document.getElementById("caption4").innerHTML = activities[0][3].name
+document.getElementById("caption4").setAttribute('href',activities[0][3].link)
 // Image 5
-document.getElementById("act5").src= activities[4].image
-document.getElementById("act5").alt = activities[4].name
-document.getElementById("caption5").innerHTML = activities[4].name
-document.getElementById("caption5").setAttribute('href',activities[4].link)
+document.getElementById("act5").src= activities[0][4].image
+document.getElementById("act5").alt = activities[0][4].name
+document.getElementById("caption5").innerHTML = activities[0][4].name
+document.getElementById("caption5").setAttribute('href',activities[0][4].link)
 };
 
 // update top activities
 function updateActivities(location){
-    /// get activities based on latlng combo
+    /// get activities based on locationID
+    console.log(location)
 };
 
 
