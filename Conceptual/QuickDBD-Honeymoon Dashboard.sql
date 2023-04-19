@@ -62,6 +62,14 @@ CREATE TABLE "temperature" (
      )
 );
 
+CREATE TABLE "costAnalysis" (
+    "LocationID" int   NOT NULL,
+    "total_rank" float   NOT NULL,
+    CONSTRAINT "pk_costAnalysis" PRIMARY KEY (
+        "LocationID"
+     )
+);
+
 CREATE TABLE "activityList" (
     "ActivityID" varchar   NOT NULL,
     "Image" text   NOT NULL,
@@ -84,6 +92,18 @@ CREATE TABLE "activities" (
      )
 );
 
+CREATE TABLE "fullactivities" (
+    "LocationID" int   NOT NULL,
+    "activity" varchar   NOT NULL,
+    "image" varchar   NOT NULL,
+    "attribution" varchar   NOT NULL,
+    "link" varchar   NOT NULL,
+    "primary_key" int   NOT NULL,
+    CONSTRAINT "pk_fullactivities" PRIMARY KEY (
+        "primary_key"
+     )
+);
+
 ALTER TABLE "locations" ADD CONSTRAINT "fk_locations_Country" FOREIGN KEY("Country")
 REFERENCES "countryFlags" ("Country");
 
@@ -91,6 +111,9 @@ ALTER TABLE "sunHours" ADD CONSTRAINT "fk_sunHours_LocationID" FOREIGN KEY("Loca
 REFERENCES "locations" ("LocationID");
 
 ALTER TABLE "temperature" ADD CONSTRAINT "fk_temperature_LocationID" FOREIGN KEY("LocationID")
+REFERENCES "locations" ("LocationID");
+
+ALTER TABLE "costAnalysis" ADD CONSTRAINT "fk_costAnalysis_LocationID" FOREIGN KEY("LocationID")
 REFERENCES "locations" ("LocationID");
 
 ALTER TABLE "activities" ADD CONSTRAINT "fk_activities_LocationID" FOREIGN KEY("LocationID")
@@ -110,6 +133,12 @@ REFERENCES "activityList" ("ActivityID");
 
 ALTER TABLE "activities" ADD CONSTRAINT "fk_activities_Activity5" FOREIGN KEY("Activity5")
 REFERENCES "activityList" ("ActivityID");
+
+ALTER TABLE "fullactivities" ADD CONSTRAINT "fk_fullactivities_LocationID" FOREIGN KEY("LocationID")
+REFERENCES "locations" ("LocationID");
+
+ALTER TABLE "fullactivities" ADD CONSTRAINT "fk_fullactivities_activity_image_attribution_link" FOREIGN KEY("activity", "image", "attribution", "link")
+REFERENCES "activityList" ("ActivityID", "Image", "Attribution", "Link");
 
 CREATE INDEX "idx_locations_City"
 ON "locations" ("City");
