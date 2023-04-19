@@ -1,6 +1,15 @@
 // Pull in data
 const url = "https://honeymoon-dashboard-slgw.onrender.com/api/get_all";
 
+// create color change for header
+anime({
+    targets: 'div',
+    translateX: 250,
+    rotate: '1turn',
+    backgroundColor: '#FFF',
+    duration: 800
+  });
+
 myMap = L.map("map",{
     center: [
             25,29,

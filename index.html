@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> Honeymoon Dashboard</title>
+  
+  <title id="title"> Honeymoon Dashboard</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.min.css">
   <style></style>
@@ -37,6 +38,11 @@
     }
     #map {height: 450px;
           width:  100%;}
+    .canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh
+    }
   </style>
 </head>
 
@@ -112,9 +118,10 @@
       <br>
       
       <div class="col-sm-9 text-center">
+        <canvas id="C">
         <div class="page-header">
           <h1 style="margin-top: -50px;">Honeymoon Dashboard</h1>
-        </div>
+        </div></canvas>
         <!-- MAP DIV -->
         <div class="well" style="margin-top: -60px; margin-right: 110px;">
           <div id="map">
@@ -215,7 +222,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- Our JavaScript -->
   <script type="text/javascript" src="static/js/logic.js"></script>
-
+<!-- Anime.JS -->
+  <script src="static/js/anime.min.js"></script>
 </body>
 </html>
+
   
