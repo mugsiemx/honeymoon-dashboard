@@ -43,7 +43,7 @@ def getdata():
     # Create list of IDs
     for LocationID in locationIDsearch:
         locationIDs.append(LocationID)
-    
+    print(locationIDs)
     # Iterate through list of IDs to gather info for individual locations
     allData = []
     for ID in locationIDs:
@@ -53,7 +53,7 @@ def getdata():
         #     country = record.Country
         #     locality = record.Locality
         #     coordinates = [record.Latitude,record.Longitude]
-        activityInfo = session.query(Activities).filter_by(LocationID=ID).all()
+        activityInfo = session.query(Activities).filter_by(LocationID = ID).all()
         activity_list = []
         for record in activityInfo:
             activity=record.activity
