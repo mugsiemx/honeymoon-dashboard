@@ -147,7 +147,8 @@ def getdata():
                         }
                 }
         allData.append(idData)
-    return jsonify(allData)
+    jsonData = {"type":"FeatureCollection","features":allData}
+    return jsonify(jsonData)
 
 
 if __name__ == "__main__":
