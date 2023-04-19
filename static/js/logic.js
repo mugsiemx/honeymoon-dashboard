@@ -62,10 +62,10 @@ function updateCharts(){
         else if (feature.properties.avgTemp[monthDropdown] < Tmax & feature.properties.avgTemp[monthDropdown]> Tmin) temp=true
         
         if(sunDropdown === "all") var sun=true
-        else if(sunDropdown ==="one") Smin = 0, Smax = (30*.1)
-        else if (sunDropdown === "two") Smin = (30*.1), Smax = (30*.2)
-        else if (sunDropdown === "three") Smin = (30*.2), Smax = (30*.3)
-        else if (sunDropdown === "four") Smin = (30*.3), Smax = (30*.5)
+        else if(sunDropdown ==="one") Smin = 0, Smax = (30*.2)
+        else if (sunDropdown === "two") Smin = (30*.2), Smax = (30*.3)
+        else if (sunDropdown === "three") Smin = (30*.3), Smax = (30*.4)
+        else if (sunDropdown === "four") Smin = (30*.4), Smax = (30*.5)
         else if (sunDropdown === "five") Smin = (30*.5), Smax = 35
         
         if(sunDropdown === "all") sun=true
