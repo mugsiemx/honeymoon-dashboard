@@ -47,12 +47,12 @@ def getdata():
     # Iterate through list of IDs to gather info for individual locations
     allData = []
     for ID in locationIDs:
-        # locationInfo = session.query(Locations).filter_by(LocationID = ID).all()
-        # for record in locationInfo:
-        #     city = record.City
-        #     country = record.Country
-        #     locality = record.Locality
-        #     coordinates = [record.Latitude,record.Longitude]
+        locationInfo = session.query(Locations).filter_by(LocationID = ID).all()
+        for record in locationInfo:
+            city = record.City
+            country = record.Country
+            locality = record.Locality
+            coordinates = [record.Latitude,record.Longitude]
         activityInfo = session.query(Activities).filter_by(LocationID = ID).all()
         activity_list = []
         for record in activityInfo:
