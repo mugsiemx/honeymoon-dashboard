@@ -121,26 +121,30 @@ locations.push(data.features[i].properties)
 document.getElementById("flag1").src = "Images/"+locations[0].flag.image
 document.getElementById("1.1").innerHTML = locations[0].name.city
 document.getElementById("1.2").innerHTML = locations[0].name.country
+document.getElementById("1.3").innerHTML = locations[0].costRank + "/5"
 // location #2
 document.getElementById("flag2").src = "Images/"+locations[1].flag.image
 document.getElementById("2.1").innerHTML = locations[1].name.city
 document.getElementById("2.2").innerHTML = locations[1].name.country
-
+document.getElementById("2.3").innerHTML = locations[1].costRank + "/5"
 
 // location #3
 document.getElementById("flag3").src = "Images/"+locations[2].flag.image
 document.getElementById("3.1").innerHTML = locations[2].name.city
 document.getElementById("3.2").innerHTML = locations[2].name.country
+document.getElementById("3.3").innerHTML = locations[2].costRank + "/5"
+
 // location #4
 document.getElementById("flag4").src = "Images/"+locations[3].flag.image
 document.getElementById("4.1").innerHTML = locations[3].name.city
 document.getElementById("4.2").innerHTML = locations[3].name.country
-
+document.getElementById("4.3").innerHTML = locations[3].costRank + "/5"
 
 // location #5
 document.getElementById("flag5").src = "Images/"+locations[4].flag.image
 document.getElementById("5.1").innerHTML = locations[4].name.city
 document.getElementById("5.2").innerHTML = locations[4].name.country
+document.getElementById("5.3").innerHTML = locations[4].costRank + "/5"
 
 
 };
@@ -321,98 +325,129 @@ function updateDestinations(data){
         document.getElementById("flag1").src = "Images/house.jpg"
         document.getElementById("1.1").innerHTML = "Stay"
         document.getElementById("1.2").innerHTML = "Home"
+        document.getElementById("1.3").innerHTML = "$0"
         document.getElementById("flag2").src = "Images/house.jpg"
         document.getElementById("2.1").innerHTML = "Stay"
         document.getElementById("2.2").innerHTML = "Home"
+        document.getElementById("2.3").innerHTML = "$0"
         document.getElementById("flag3").src = "Images/house.jpg"
         document.getElementById("3.1").innerHTML = "Stay"
         document.getElementById("3.2").innerHTML = "Home"
+        document.getElementById("3.3").innerHTML = "$0"
         document.getElementById("flag4").src = "Images/house.jpg"
         document.getElementById("4.1").innerHTML = "Stay"
         document.getElementById("4.2").innerHTML = "Home"
+        document.getElementById("4.3").innerHTML = "$0"
         document.getElementById("flag5").src = "Images/house.jpg"
         document.getElementById("5.1").innerHTML = "Stay"
-        document.getElementById("5.2").innerHTML = "Home"    }        
+        document.getElementById("5.2").innerHTML = "Home"
+        document.getElementById("5.3").innerHTML = "$0"    }        
     else if(data.length === 1){
         document.getElementById("flag1").src = "Images/"+data[0].flag.image
         document.getElementById("1.1").innerHTML = data[0].name.city
         document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("1.3").innerHTML = data[0].costRank + "/5"
         document.getElementById("flag2").src = "Images/house.jpg"
         document.getElementById("2.1").innerHTML = "Stay"
         document.getElementById("2.2").innerHTML = "Home"
+        document.getElementById("2.3").innerHTML = "$0"
         document.getElementById("flag3").src = "Images/house.jpg"
         document.getElementById("3.1").innerHTML = "Stay"
         document.getElementById("3.2").innerHTML = "Home"
+        document.getElementById("3.3").innerHTML = "$0"
         document.getElementById("flag4").src = "Images/house.jpg"
         document.getElementById("4.1").innerHTML = "Stay"
         document.getElementById("4.2").innerHTML = "Home"
+        document.getElementById("4.3").innerHTML = "$0"
         document.getElementById("flag5").src = "Images/house.jpg"
         document.getElementById("5.1").innerHTML = "Stay"
-        document.getElementById("5.2").innerHTML = "Home" }
+        document.getElementById("5.2").innerHTML = "Home"
+        document.getElementById("5.3").innerHTML = "$0"   }
     else if(data.length === 2){
         document.getElementById("flag1").src = "Images/"+data[0].flag.image
         document.getElementById("1.1").innerHTML = data[0].name.city
         document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("1.3").innerHTML = data[0].costRank + "/5"
         document.getElementById("flag2").src = "Images/"+data[1].flag.image
         document.getElementById("2.1").innerHTML = data[1].name.city
         document.getElementById("2.2").innerHTML = data[1].name.country
+        document.getElementById("2.3").innerHTML = data[1].costRank + "/5"
         document.getElementById("flag3").src = "Images/house.jpg"
         document.getElementById("3.1").innerHTML = "Stay"
         document.getElementById("3.2").innerHTML = "Home"
+        document.getElementById("3.3").innerHTML = "$0"
         document.getElementById("flag4").src = "Images/house.jpg"
         document.getElementById("4.1").innerHTML = "Stay"
         document.getElementById("4.2").innerHTML = "Home"
+        document.getElementById("4.3").innerHTML = "$0"
         document.getElementById("flag5").src = "Images/house.jpg"
         document.getElementById("5.1").innerHTML = "Stay"
-        document.getElementById("5.2").innerHTML = "Home" } 
+        document.getElementById("5.2").innerHTML = "Home"
+        document.getElementById("5.3").innerHTML = "$0"   } 
     else if(data.length === 3){
         document.getElementById("flag1").src = "Images/"+data[0].flag.image
         document.getElementById("1.1").innerHTML = data[0].name.city
         document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("1.3").innerHTML = data[0].costRank + "/5"
         document.getElementById("flag2").src = "Images/"+data[1].flag.image
         document.getElementById("2.1").innerHTML = data[1].name.city
         document.getElementById("2.2").innerHTML = data[1].name.country
+        document.getElementById("2.3").innerHTML = data[1].costRank + "/5"
         document.getElementById("flag3").src = "Images/"+data[2].flag.image
         document.getElementById("3.1").innerHTML = data[2].name.city
         document.getElementById("3.2").innerHTML = data[2].name.country
+        document.getElementById("3.3").innerHTML = data[2].costRank + "/5"
         document.getElementById("flag4").src = "Images/house.jpg"
         document.getElementById("4.1").innerHTML = "Stay"
         document.getElementById("4.2").innerHTML = "Home"
+        document.getElementById("4.3").innerHTML = "$0"
         document.getElementById("flag5").src = "Images/house.jpg"
         document.getElementById("5.1").innerHTML = "Stay"
-        document.getElementById("5.2").innerHTML = "Home" } 
+        document.getElementById("5.2").innerHTML = "Home"
+        document.getElementById("5.3").innerHTML = "$0"    } 
     else if(data.length === 4){
         document.getElementById("flag1").src = "Images/"+data[0].flag.image
         document.getElementById("1.1").innerHTML = data[0].name.city
         document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("1.3").innerHTML = data[0].costRank + "/5"
         document.getElementById("flag2").src = "Images/"+data[1].flag.image
         document.getElementById("2.1").innerHTML = data[1].name.city
         document.getElementById("2.2").innerHTML = data[1].name.country
+        document.getElementById("2.3").innerHTML = data[1].costRank + "/5"
         document.getElementById("flag3").src = "Images/"+data[2].flag.image
         document.getElementById("3.1").innerHTML = data[2].name.city
         document.getElementById("3.2").innerHTML = data[2].name.country
+        document.getElementById("3.3").innerHTML = data[2].costRank + "/5"
         document.getElementById("flag4").src = "Images/"+data[3].flag.image
         document.getElementById("4.1").innerHTML = data[3].name.city
         document.getElementById("4.2").innerHTML = data[3].name.country
+        document.getElementById("4.3").innerHTML = data[3].costRank + "/5"
         document.getElementById("flag5").src = "Images/house.jpg"
         document.getElementById("5.1").innerHTML = "Stay"
-        document.getElementById("5.2").innerHTML = "Home" }
+        document.getElementById("5.2").innerHTML = "Home"
+        document.getElementById("5.3").innerHTML = "$0"  }
     else if(data.length >4){
         document.getElementById("flag1").src = "Images/"+data[0].flag.image
         document.getElementById("1.1").innerHTML = data[0].name.city
         document.getElementById("1.2").innerHTML = data[0].name.country
+        document.getElementById("1.3").innerHTML = data[0].costRank + "/5"
         document.getElementById("flag2").src = "Images/"+data[1].flag.image
         document.getElementById("2.1").innerHTML = data[1].name.city
         document.getElementById("2.2").innerHTML = data[1].name.country
+        document.getElementById("2.3").innerHTML = data[1].costRank + "/5"
         document.getElementById("flag3").src = "Images/"+data[2].flag.image
         document.getElementById("3.1").innerHTML = data[2].name.city
         document.getElementById("3.2").innerHTML = data[2].name.country
+        document.getElementById("3.3").innerHTML = data[2].costRank + "/5"
         document.getElementById("flag4").src = "Images/"+data[3].flag.image
         document.getElementById("4.1").innerHTML = data[3].name.city
         document.getElementById("4.2").innerHTML = data[3].name.country
+        document.getElementById("4.3").innerHTML = data[3].costRank + "/5"
         document.getElementById("flag5").src = "Images/"+data[4].flag.image
         document.getElementById("5.1").innerHTML = data[4].name.city
-        document.getElementById("5.2").innerHTML = data[4].name.country }        
+        document.getElementById("5.2").innerHTML = data[4].name.country
+        document.getElementById("5.3").innerHTML = data[4].costRank + "/5"
+    }        
 };
 
 
