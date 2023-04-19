@@ -40,7 +40,7 @@ function initMap(data){
 function updateCharts(){
     // collect the new values of all dropdowns
     let monthDropdown = d3.select('#monthSelect').property("value");
-    // let costDropdown = d3.select('#costSelect').property("value");
+    let costDropdown = d3.select('#costSelect').property("value");
     let tempDropdown = d3.select('#tempSelect').property("value");
     let sunDropdown = d3.select('#sunSelect').property("value");
     // clear all markers from map
@@ -71,7 +71,17 @@ function updateCharts(){
         if(sunDropdown === "all") sun=true
         else if(feature.properties.sunDays[monthDropdown] < Smax & feature.properties.sunDays[monthDropdown]> Smin) var sun=true
     
-        if(temp===true & sun===true) return true
+        if(costDropdown ==="all") var cost=true
+        else if(costDropdown==="one") Cmax= 1
+        else if(costDropdown==="two") Cmax=2
+        else if(costDropdown==="three") Cmax=3
+        else if(costDropdown ==="four") Cmax=4
+        else if(costDropdown==="five") Cmax=5
+
+        if(costDropdown==="all") cost=true
+        else if(feature.properties.costRank < Cmax) var cost=true
+
+        if(temp===true & sun===true & cost===true) return true
     }
     console.log()
     locationList = []

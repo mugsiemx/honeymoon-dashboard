@@ -24,6 +24,7 @@ CountryFlags = Base.classes.countryFlags
 Locations = Base.classes.locations
 SunDays = Base.classes.sunHours
 Temperature = Base.classes.temperature
+Cost = Base.classes.costData
 
 #create engine 
 app = Flask(__name__)
@@ -98,6 +99,9 @@ def getdata():
         for record in flagInfo:
             countryAttribution = record.Attribution
             countryImage = record.Image
+        costInfo = session.query(Cost).filter_by(LocationID=ID).all()
+        for record in costInfo:
+            costRank = record.cost_rank
         idData = {"type":"Feature",
                   "properties": {
                         "ID":ID,
@@ -139,7 +143,8 @@ def getdata():
                         "flag":{
                             "attribution":countryAttribution,
                             "image":countryImage
-                        }
+                        },
+                        "costRank" : costRank
                         },
                   "geometry": {
                         "type":"Point",
