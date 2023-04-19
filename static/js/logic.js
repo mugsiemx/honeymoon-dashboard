@@ -52,9 +52,9 @@ function updateCharts(){
     // Filter the data based on the dropdowns
     function allFilter(feature){
         if(tempDropdown === "all") var temp=true
-        else if(tempDropdown === "32") Tmin = -10, Tmax = 32
-        else if (tempDropdown === "50") Tmin = 32, Tmax = 50
-        else if (tempDropdown === "70") Tmin = 50, Tmax = 70
+        else if(tempDropdown === "45") Tmin = -10, Tmax = 45
+        else if (tempDropdown === "60") Tmin = 45, Tmax = 60
+        else if (tempDropdown === "70") Tmin = 60, Tmax = 70
         else if (tempDropdown === "80") Tmin = 70, Tmax = 80
         else if (tempDropdown === "100") Tmin = 80, Tmax = 100
 
@@ -63,10 +63,10 @@ function updateCharts(){
         
         if(sunDropdown === "all") var sun=true
         else if(sunDropdown ==="one") Smin = 0, Smax = (30*.1)
-        else if (sunDropdown === "two") Smin = (30*.1), Smax = (30*.3)
-        else if (sunDropdown === "three") Smin = (30*.3), Smax = (30*.5)
-        else if (sunDropdown === "four") Smin = (30*.5), Smax = (30*.7)
-        else if (sunDropdown === "five") Smin = (30*.7), Smax = 35
+        else if (sunDropdown === "two") Smin = (30*.1), Smax = (30*.2)
+        else if (sunDropdown === "three") Smin = (30*.2), Smax = (30*.3)
+        else if (sunDropdown === "four") Smin = (30*.3), Smax = (30*.5)
+        else if (sunDropdown === "five") Smin = (30*.5), Smax = 35
         
         if(sunDropdown === "all") sun=true
         else if(feature.properties.sunDays[monthDropdown] < Smax & feature.properties.sunDays[monthDropdown]> Smin) var sun=true
@@ -115,7 +115,6 @@ locations=[]
 for (var i=0; i<5;i++){
 locations.push(data.features[i].properties)
 }
-
 
 // location #1
 document.getElementById("flag1").src = "Images/"+locations[0].flag.image
