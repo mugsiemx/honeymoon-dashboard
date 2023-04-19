@@ -40,6 +40,8 @@ Python, Jupyter Notebook, Javascript, Quick DBD, Postgresql, Flask, HTML, CSS, R
 - A sketch of our product idea:
 ![Website Sketch](https://user-images.githubusercontent.com/115373233/232637272-dc074f41-8dcc-4c4f-96be-a50c81bb0730.png)
 - An image of our online dashboard:
+![TheDash.pdf](https://github.com/mugsiemx/honeymoon-dashboard/files/11276428/TheDash.pdf)
+
 
 ## Learn More About Our Project 
 - https://www.canva.com/design/DAFgYskWFwg/wyGfann_B40GxWEgCRDYBg/view?utm_content=DAFgYskWFwg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
