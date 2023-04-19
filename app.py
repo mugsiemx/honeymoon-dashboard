@@ -143,7 +143,7 @@ def getdata():
                         },
                   "geometry": {
                         "type":"point",
-                        "coordinates":[coordinates]
+                        "coordinates":coordinates
                         }
                 }
         allData.append(idData)
