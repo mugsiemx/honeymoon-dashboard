@@ -8,9 +8,9 @@ from sqlalchemy.ext.automap import automap_base
 from flask_cors import cross_origin
 
 engine = create_engine(os.getenv('DATABASE_URI'),pool_size=10,max_overflow=-1)
-meta = MetaData()
-MetaData.reflect(meta,bind=engine)
-meta.create_all(engine)
+# meta = MetaData()
+# MetaData.reflect(meta,bind=engine)
+# meta.create_all(engine)
 
 
 Base = automap_base()
