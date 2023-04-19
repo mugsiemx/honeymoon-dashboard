@@ -10,7 +10,7 @@ from flask_cors import cross_origin
 engine = create_engine(os.getenv('DATABASE_URI'))
 meta = MetaData()
 MetaData.clear(meta)
-MetaData.reflect(meta)
+MetaData.reflect(meta,bind=engine)
 
 Base = automap_base()
 
