@@ -56,10 +56,10 @@ def getdata():
         activityInfo = session.query(Activities).filter_by(LocationID = ID).all()
         activity_list = []
         for record in activityInfo:
-            activity=record.activity
-            image=record.image
-            attribution=record.attribution
-            link=record.link
+            activity=record['activity']
+            image=record['image']
+            attribution=record['attribution']
+            link=record['link']
             activity_dict = { "name":activity,
                              "image":image,
                              "attribution":attribution,
