@@ -27,7 +27,7 @@ function initMap(data){
                 },
             });
             // Create a popup for each location with relevant info
-            layer.bindPopup("hi!")////////INSERT POPUP INFO HERE////////)  
+            layer.bindPopup(feature.properties.name.city + ", " + feature.properties.name.country)////////INSERT POPUP INFO HERE////////)  
         },
     }).addTo(myMap);
 };
