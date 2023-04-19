@@ -2,7 +2,7 @@
 const url = "https://honeymoon-dashboard-slgw.onrender.com/api/get_all";
 
 // Initialize Map
-function initMap(allData){
+function initMap(data){
     var myMap = L.map("map",{
         center: [
                         37.09, -95.71,
@@ -14,7 +14,7 @@ function initMap(allData){
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(myMap);
    // create markers for all datapoints
-    L.geoJSON(allData,{
+    L.geoJSON(data,{
         // create the points
         pointToLayer: function(feature,latlng){
             return L.marker(latlng);
@@ -102,12 +102,10 @@ function sunChanged(){
 d3.json(url).then(function(data){
     // confirm data loaded successfully
     console.log(data);
-    // separate out needed data
-    allData = //INSERT DATA HERE//;
     // initialize map
-    initMap(allData);
+    initMap(data);
     // initialize top destinations
-    initDestinations(allData);
+    initDestinations(data);
     // initialize top activities
-    initActivities(allData);
+    initActivities(data);
 });

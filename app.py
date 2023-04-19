@@ -74,7 +74,7 @@ def getdata():
             OctTemp = record.October
             NovTemp = record.November
             DecTemp = record.December
-        sunInfo = session.query(sunDays).filter_by(LocationID=ID).all()
+        sunInfo = session.query(SunDays).filter_by(LocationID=ID).all()
         for record in sunInfo:
             JanSun = record.January
             FebSun = record.February
