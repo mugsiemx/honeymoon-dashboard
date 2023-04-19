@@ -22,10 +22,6 @@ Temperature = Base.classes.temperature
 #create engine 
 app = Flask(__name__)
 
-
-# Bind Session
-
-
 # #test
 @app.route('/')
 @cross_origin()
@@ -133,31 +129,7 @@ def getdata():
                             "December":DecSun
                         },
                         "activities":[
-                            {"name": name1,
-                            "attribution":attribution1,
-                            "image":image1,
-                            "link":link1
-                            },
-                            {   "name": name2,
-                                "attribution":attribution2,
-                                "image":image2,
-                                "link":link2
-                            },
-                            { "name": name3,
-                                "attribution":attribution3,
-                                "image":image3,
-                                "link":link3
-                            },
-                            {"name": name4,
-                                "attribution":attribution4,
-                                "image":image4,
-                                "link":link4
-                            },
-                            {"name": name5,
-                                "attribution":attribution5,
-                                "image":image5,
-                                "link":link5
-                            }],
+                          activity_list],
                         "flag":{
                             "attribution":countryAttribution,
                             "image":countryImage
@@ -170,5 +142,7 @@ def getdata():
                 }
         allData.append(idData)
     return jsonify(allData)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
