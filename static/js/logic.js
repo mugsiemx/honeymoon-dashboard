@@ -43,7 +43,6 @@ function updateCharts(){
     // let costDropdown = d3.select('#costSelect').property("value");
     let tempDropdown = d3.select('#tempSelect').property("value");
     let sunDropdown = d3.select('#sunSelect').property("value");
-
     // clear all markers from map
     layer.removeFrom(myMap);
     
@@ -51,33 +50,51 @@ function updateCharts(){
     catch (error){}
 
     // create new dataset
-    function tempFilter(feature){
-        if(tempDropdown = "all") return true
-        else if(tempDropdown = "32") min = -10, max = 32
-        else if (tempDropdown = "50") min = 32, max = 50
-        else if (tempDropdown = "70") min = 50, max = 70
-        else if (tempDropdown = "80") min = 70, max = 80
-        else if (tempDropdown = "100") min = 80, max = 100
+    // function tempFilter(feature){
+    //     if(tempDropdown === "all") return true
+    //     else if(tempDropdown === "32") min = -10, max = 32
+    //     else if (tempDropdown === "50") min = 32, max = 50
+    //     else if (tempDropdown === "70") min = 50, max = 70
+    //     else if (tempDropdown === "80") min = 70, max = 80
+    //     else if (tempDropdown === "100") min = 80, max = 100
 
-        if(monthDropdown = 'all') 
-            if(average(feature.properties.avgTemp) < max & average(feature.properties.avgTemp) > min) return true
-        else if(feature.properties.avgTemp[monthDropdown] < max & feature.properties.avgTemp[monthDropdown]> min) return true
-    }
-    function sunFilter(feature){
-        if(sunDropdown = "all") return true
-        else if(sunDropdown = "one") min = 0, max = (30*.1)
-        else if (sunDropdown = "two") min = (30*.1), max = (30*.3)
-        else if (sunDropdown = "three") min = (30*.3), max = (30*.5)
-        else if (sunDropdown = "four") min = (30*.5), max = (30*.7)
-        else if (sunDropdown = "five") min = (30*.7), max = 35
+    //     if(feature.properties.avgTemp[monthDropdown] < max & feature.properties.avgTemp[monthDropdown]> min) return true
+    // }
+    // function sunFilter(feature){
+    //     if(sunDropdown === "all") return true
+    //     else if(sunDropdown ==="one") min = 0, max = (30*.1)
+    //     else if (sunDropdown === "two") min = (30*.1), max = (30*.3)
+    //     else if (sunDropdown === "three") min = (30*.3), max = (30*.5)
+    //     else if (sunDropdown === "four") min = (30*.5), max = (30*.7)
+    //     else if (sunDropdown === "five") min = (30*.7), max = 35
 
-        if(monthDropdown = 'all') 
-            if(average(feature.properties.sunDays) < max & average(feature.properties.sunDays) > min) return true
-        else if(feature.properties.sunDays[monthDropdown] < max & feature.properties.sunDays[monthDropdown]> min) return true
-    }
+    //    if(feature.properties.sunDays[monthDropdown] < max & feature.properties.sunDays[monthDropdown]> min) return true
+    // }
 // /////////////////////// can't make filters work ////////////////////////////
+    console.log(tempDropdown)
+    console.log(sunDropdown)    
     function allFilter(feature){
-        if (tempFilter(feature) == true & sunFilter(feature) == true) return true
+        if(tempDropdown === "all") var temp=true
+        else if(tempDropdown === "32") Tmin = -10, Tmax = 32
+        else if (tempDropdown === "50") Tmin = 32, Tmax = 50
+        else if (tempDropdown === "70") Tmin = 50, Tmax = 70
+        else if (tempDropdown === "80") Tmin = 70, Tmax = 80
+        else if (tempDropdown === "100") Tmin = 80, Tmax = 100
+
+        if(tempDropdown === "all") var temp=true
+        else if (feature.properties.avgTemp[monthDropdown] < Tmax & feature.properties.avgTemp[monthDropdown]> Tmin) temp=true
+        
+        if(sunDropdown === "all") var sun=true
+        else if(sunDropdown ==="one") Smin = 0, Smax = (30*.1)
+        else if (sunDropdown === "two") Smin = (30*.1), Smax = (30*.3)
+        else if (sunDropdown === "three") Smin = (30*.3), Smax = (30*.5)
+        else if (sunDropdown === "four") Smin = (30*.5), Smax = (30*.7)
+        else if (sunDropdown === "five") Smin = (30*.7), Smax = 35
+        
+        if(sunDropdown === "all") sun=true
+        else if(feature.properties.sunDays[monthDropdown] < Smax & feature.properties.sunDays[monthDropdown]> Smin) var sun=true
+    
+        if(temp===true & sun===true) return true
     }
     console.log(allData)
     // add new markers based on filters
