@@ -14,8 +14,8 @@ let animation = anime({
         return (1-i) + .25},
     rotate:function(){return anime.random(-360,360);},
     borderRadius: function() {return ['50%',anime.random(10,35)+'%'];},
-    duration: function() { return anime.random(1200, 1800); },
-    delay: function() { return anime.random(0, 400); },
+    duration: function() { return anime.random(1000,1500); },
+    delay: function() { return anime.random(35,55); },
     direction: 'alternate',
     loop: true
     });  
