@@ -1,18 +1,24 @@
 // Pull in data
 const url = "https://honeymoon-dashboard-slgw.onrender.com/api/get_all";
 
-// create color change for header
+// create logo animation
+/////// code below is adjusted from code provided in documentation//////
 let animation = anime({
-    targets: 'div',
+    targets: document.getElementById('logo1'),
     // Properties 
-    translateX: 100,
-    borderRadius: 50,
-    // Property Parameters
-    duration: 2000,
-    easing: 'linear',
-    // Animation Parameters
-    direction: 'alternate'
-  });  
+    translateX: function(logo1) {
+        return logo1.getAttribute('data-x')},
+    translateY: function(logo1,i){
+        return 50 + (-50*i)},
+    scale: function(logo1,i,l){
+        return (1-i) + .25},
+    rotate:function(){return anime.random(-360,360);},
+    borderRadius: function() {return ['50%',anime.random(10,35)+'%'];},
+    duration: function() { return anime.random(1200, 1800); },
+    delay: function() { return anime.random(0, 400); },
+    direction: 'alternate',
+    loop: true
+    });  
 
 myMap = L.map("map",{
     center: [
