@@ -119,7 +119,9 @@ function updateCharts(){
             });
             // Create a popup for each location with relevant info
             layer.bindPopup(feature.properties.name.city + ", " + feature.properties.name.country);
-            locationList.push(feature.properties)  
+            errors = [4,6,8,10]
+            if (!errors.includes(feature.properties.ID)){
+            locationList.push(feature.properties)}
         },    
         }).addTo(myMap);
     // location #1
@@ -131,9 +133,10 @@ function initDestinations(data){
 // choose the top destinations 
 
 locations=[]
-for (var i=0; i<5;i++){
-locations.push(data.features[i].properties)
+for (var i=0; i<5;i++){ 
+        locations.push(data.features[i].properties)
 }
+
 
 // location #1
 document.getElementById("flag1").src = "Images/"+locations[0].flag.image
