@@ -2,7 +2,7 @@
 const url = "https://honeymoon-dashboard-slgw.onrender.com/api/get_all";
 
 // create logo animation
-/////// code below is adjusted from code provided in documentation//////
+/////// code below is adjusted from code provided in anime.js documentation //////
 let animation = anime({
     targets: document.getElementById('logo1'),
     // Properties 
