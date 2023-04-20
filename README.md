@@ -19,6 +19,7 @@ Python, Jupyter Notebook, Javascript, Quick DBD, Postgresql, Flask, HTML, CSS, R
 
 ## References
 ## Files Downloaded and Used, including images
+- https://animejs.com/ to animate our company logo. Our requirement to utilize a new to us javascript library.
 - https://flagsapi.com/ for supporting free downloads of countries flags. Our requirements to include a flag for each country were easily met with this free website.
 - https://www.kaggle.com/datasets/mvieira101/global-cost-of-living provided cost information web scraped from https://www.numbeo.com. 
 - https://www.kaggle.com/datasets/prasertk/the-best-cities-for-a-workation provided data from: https://www.holidu.co.uk/magazine/the-best-cities-for-a-workation as a starter list of cities to holiday in.
