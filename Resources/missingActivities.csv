@@ -1,90 +1,86 @@
-,locationID,latitude,longitude,category,results_total,avg_rating,avg_review_count,City,State/Province,Country
-1161,2,-19.99697155,-157.78587140620786,,,,,Cook Islands,,Cook Islands
-1162,8,-36.718804999999996,142.22095086226386,,,,,Grampians,Victoria,Australia
-1163,9,49.5041747,-115.062867,,,,,Fernie,British Columbia,Canada
-1164,10,42.64873625,18.094680152605108,,,,,Dubrovnik,Croatia,Croatia
-1165,13,17.223472100000002,-61.9554608,,,,,Antigua and Barbuda,,Antigua and Barbuda
-1166,14,25.265347100000003,55.292491399999996,,,,,Dubai,United Arab Emirates,United Arab Emirates
-1167,16,21.721746,-71.5527809,,,,,Turks and Caicos Islands,,Turks and Caicos Islands
-1168,20,-33.928992,18.417396,,,,,Cape Town,Western Cape,South Africa
-1169,21,-19.1421421,146.83354856403196,,,,,Magnetic Island,Queensland,Australia
-1170,22,-33.934444,18.869167,,,,,Stellenbosch,Western Cape,South Africa
-1171,26,-6.166490799999999,39.2074312,,,,,Zanzibar,Tanzania,Tanzania
-1172,27,-20.2759451,57.5703566,,,,,Mauritius,,Mauritius
-1173,29,19.70318225,-79.9174627243246,,,,,Cayman Islands,,Cayman Islands
-1174,30,-4.6574976999999995,55.45401460000001,,,,,Seychelles,,Seychelles
-1175,33,31.6258257,-7.9891608,,,,,Marrakesh,Morocco,Morocco
-1176,40,-33.953177600000004,115.07693689999999,,,,,Margaret River,Western Australia,Australia
-1177,41,26.9154576,75.81898170000001,,,,,Jaipur,Rajasthan,India
-1178,42,46.603353999999996,1.8883334999999999,,,,,French Polynesia,France,France
-1179,43,13.1500331,-59.52503050000001,,,,,Barbados,,Barbados
-1180,47,24.578720999999998,73.6862571,,,,,Udaipur,Rajasthan,India
-1181,50,18.185050699999998,-77.3947693,,,,,Jamaica,,Jamaica
-1182,51,12.51756625,-69.98186415210564,,,,,Aruba,Kingdom of the Netherlands,Netherlands
-1183,52,-35.14181285,150.39164649482632,,,,,Shoalhaven,New South Wales,Australia
-1184,53,-34.4175,19.2361111,,,,,Hermanus,Western Cape,South Africa
-1185,55,-33.8611665,121.88851585854931,,,,,Esperance,Western Australia,Australia
-1186,66,27.1752554,78.0098161,,,,,Agra,Uttar Pradesh,India
-1187,68,36.4071112,25.456663652707157,,,,,Santorini,Greece,Greece
-1188,69,55.399722499999996,10.3852104,,,,,Odense,Fyn,Denmark
-1189,71,39.7837304,-100.445882,,,,,Kaua'i,Hawaii,United States
-1190,79,-18.123969600000002,179.0122737,,,,,Fiji,,Fiji
-1191,81,59.938731999999995,30.316228999999996,,,,,St. Petersburg,Florida,Russia
-1192,82,13.8250489,-60.975035999999996,,,,,Saint Lucia,,Saint Lucia
-1193,84,24.7736546,-78.0000547,,,,,Bahamas,,Bahamas
-1194,86,-8.456018100000001,115.27038551191185,,,,,Bali,Indonesia,Indonesia
-1195,91,13.7524938,100.49350890000001,,,,,Bangkok,,Thailand
-1196,92,28.613895399999997,77.2090057,,,,,New Delhi,,India
-1197,96,47.48138955,19.14609412691246,,,,,Budapest,,Hungary
-1198,97,19.0785451,72.878176,,,,,Mumbai,,India
-1199,99,44.4361414,26.1027202,,,,,Bucharest,,Romania
-1200,100,7.8847901,98.3891503,,,,,Phuket,,Thailand
-1201,101,18.788277800000003,98.9858802,,,,,Chiang Mai,,Thailand
-1202,103,-6.175247,106.82704879999999,,,,,Jakarta,,Indonesia
-1203,106,42.6977028,23.3217359,,,,,Sofia,,Bulgaria
-1204,108,21.0283207,105.85402169999999,,,,,Hanoi,,Vietnam
-1205,111,10.7763897,106.70113909999998,,,,,Ho Chi Minh City,,Vietnam
-1206,113,44.8178131,20.4568974,,,,,Belgrade,,Serbia
-1207,115,13.3617562,103.8590321,,,,,Siem Reap,,Cambodia
-1208,118,50.4500336,30.524136100000003,,,,,Kyiv,,Ukraine
-1209,120,55.7504461,37.6174943,,,,,Moscow,,Russia
-1210,121,15.879813699999998,108.3273939,,,,,Hoi An,,Vietnam
-1211,123,6.9387469,79.8541134,,,,,Colombo,,Sri Lanka
-1212,124,37.5666791,126.97829140000002,,,,,Seoul,,South Korea
-1213,131,31.6258257,-7.9891608,,,,,Marrakech,,Morocco
-1214,134,6.2443382000000005,-75.573553,,,,,Medellin,,Colombia
-1215,136,27.708316999999997,85.3205817,,,,,Kathmandu,,Nepal
-1216,141,-26.205,28.049721999999996,,,,,Johannesburg,,South Africa
-1217,146,37.9755648,23.7348324,,,,,Athens,,Greece
-1218,147,11.568271000000001,104.9224426,,,,,Phnom Penh,,Cambodia
-1219,148,39.9057136,116.39129720000001,,,,,Beijing,,China
-1220,150,-12.0621065,-77.03652559999999,,,,,Lima,,Peru
-1221,153,53.9024716,27.561822499999998,,,,,Minsk,,Belarus
-1222,154,10.4266746,-75.5443419,,,,,Cartagena,,Colombia
-1223,157,46.0500268,14.506928899999998,,,,,Ljubljana,,Slovenia
-1224,158,-0.2201641,-78.5123274,,,,,Quito,,Ecuador
-1225,164,59.4372155,24.745368799999998,,,,,Tallinn,,Estonia
-1226,165,45.84264135,15.962231476593626,,,,,Zagreb,,Croatia
-1227,166,34.2607713,108.9423443,,,,,Xi'an,,China
-1228,167,16.7967129,96.1609916,,,,,Yangon,,Myanmar
-1229,173,-16.3988667,-71.53696070000001,,,,,Arequipa,,Peru
-1230,174,-34.905891600000004,-56.191309499999996,,,,,Montevideo,,Uruguay
-1231,176,43.511638299999994,16.4399659,,,,,Split,,Croatia
-1232,177,28.209538000000002,83.99140200000001,,,,,Pokhara,,Nepal
-1233,180,31.232343699999998,121.4691024,,,,,Shanghai,,China
-1234,182,56.949397700000006,24.1051846,,,,,Riga,,Latvia
-1235,186,54.6870458,25.2829111,,,,,Vilnius,,Lithuania
-1236,190,39.7837304,-100.445882,,,,,Honolulu,Hawaii,United States
-1237,197,43.17389195,16.556523494578517,,,,,Hvar,,Croatia
-1238,199,9.932542699999999,-84.0795782,,,,,San Jose,,Costa Rica
-1239,200,24.453835199999997,54.3774014,,,,,Abu Dhabi,,United Arab Emirates
-1240,203,17.964098800000002,102.6133707,,,,,Vientiane,,Laos
-1241,211,-16.4955455,-68.1336229,,,,,La Paz,,Bolivia
-1242,212,25.2856329,51.5264162,,,,,Doha,,Qatar
-1243,214,32.0852997,34.7818064,,,,,Tel Aviv,,Israel
-1244,216,14.693425,-17.447938,,,,,Dakar,,Senegal
-1245,217,23.588201899999998,58.3829448,,,,,Muscat,,Oman
-1246,221,29.3796532,47.9734174,,,,,Kuwait City,,Kuwait
-1247,223,33.8959203,35.478429999999996,,,,,Beirut,,Lebanon
-1248,226,35.898981799999994,14.513675899999999,,,,,Valletta,,Malta
-1249,227,64.145981,-21.9422367,,,,,Reykjavik,,Iceland
+,LocationID,City,State/Province,Country
+0,2,Cook Islands,,Cook Islands
+1,8,Grampians,Victoria,Australia
+2,10,Dubrovnik,Croatia,Croatia
+3,13,Antigua and Barbuda,,Antigua and Barbuda
+4,14,Dubai,United Arab Emirates,United Arab Emirates
+5,16,Turks and Caicos Islands,,Turks and Caicos Islands
+6,20,Cape Town,Western Cape,South Africa
+7,22,Stellenbosch,Western Cape,South Africa
+8,26,Zanzibar,Tanzania,Tanzania
+9,27,Mauritius,,Mauritius
+10,29,Cayman Islands,,Cayman Islands
+11,30,Seychelles,,Seychelles
+12,33,Marrakesh,Morocco,Morocco
+13,41,Jaipur,Rajasthan,India
+14,42,French Polynesia,France,France
+15,43,Barbados,,Barbados
+16,47,Udaipur,Rajasthan,India
+17,50,Jamaica,,Jamaica
+18,51,Aruba,Kingdom of the Netherlands,Netherlands
+19,53,Hermanus,Western Cape,South Africa
+20,55,Esperance,Western Australia,Australia
+21,66,Agra,Uttar Pradesh,India
+22,68,Santorini,Greece,Greece
+23,69,Odense,Fyn,Denmark
+24,71,Kaua'i,Hawaii,United States
+25,79,Fiji,,Fiji
+26,81,St. Petersburg,Florida,Russia
+27,82,Saint Lucia,,Saint Lucia
+28,84,Bahamas,,Bahamas
+29,86,Bali,Indonesia,Indonesia
+30,91,Bangkok,,Thailand
+31,92,New Delhi,,India
+32,96,Budapest,,Hungary
+33,97,Mumbai,,India
+34,99,Bucharest,,Romania
+35,100,Phuket,,Thailand
+36,101,Chiang Mai,,Thailand
+37,103,Jakarta,,Indonesia
+38,106,Sofia,,Bulgaria
+39,108,Hanoi,,Vietnam
+40,111,Ho Chi Minh City,,Vietnam
+41,113,Belgrade,,Serbia
+42,115,Siem Reap,,Cambodia
+43,118,Kyiv,,Ukraine
+44,120,Moscow,,Russia
+45,121,Hoi An,,Vietnam
+46,123,Colombo,,Sri Lanka
+47,124,Seoul,,South Korea
+48,131,Marrakech,,Morocco
+49,134,Medellin,,Colombia
+50,136,Kathmandu,,Nepal
+51,141,Johannesburg,,South Africa
+52,146,Athens,,Greece
+53,147,Phnom Penh,,Cambodia
+54,148,Beijing,,China
+55,150,Lima,,Peru
+56,153,Minsk,,Belarus
+57,154,Cartagena,,Colombia
+58,157,Ljubljana,,Slovenia
+59,158,Quito,,Ecuador
+60,164,Tallinn,,Estonia
+61,165,Zagreb,,Croatia
+62,166,Xi'an,,China
+63,167,Yangon,,Myanmar
+64,173,Arequipa,,Peru
+65,174,Montevideo,,Uruguay
+66,176,Split,,Croatia
+67,177,Pokhara,,Nepal
+68,180,Shanghai,,China
+69,182,Riga,,Latvia
+70,186,Vilnius,,Lithuania
+71,190,Honolulu,Hawaii,United States
+72,197,Hvar,,Croatia
+73,199,San Jose,,Costa Rica
+74,200,Abu Dhabi,,United Arab Emirates
+75,203,Vientiane,,Laos
+76,211,La Paz,,Bolivia
+77,212,Doha,,Qatar
+78,214,Tel Aviv,,Israel
+79,216,Dakar,,Senegal
+80,217,Muscat,,Oman
+81,221,Kuwait City,,Kuwait
+82,223,Beirut,,Lebanon
+83,226,Valletta,,Malta
+84,227,Reykjavik,,Iceland
