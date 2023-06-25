@@ -36,30 +36,6 @@ app = Flask(__name__)
 def welcome():
     return 'Welcome to our API!! Use /api/get_all to get all JSON data'
 
-@app.route('/api/locations')
-@cross_origin()
-def locations():
-    locations = location.query.all()
-    return jsonify({"data":[{
-        "locationID":locations.locationID,
-        "countryID":locations.countryID,
-        "city":locations.city,
-        "locality":locations.locality,
-        "coordinates":{"longitude":locations.longitude,"latitude":locations.latitude}
-    } for location in locations]})
-
-# @app.route('/api/countries')
-# @cross_origin()
-# def countries():
-#     countries = country.query.all()
-#     return jsonify({"data":[{
-#         "countryID":country.countryID,
-#         "country":country.country,
-#         "image":country.image,
-#         "attribution":country.attribution
-#     }for country in countries]})
-
-
 
 @app.route('/api/get_all')
 @cross_origin()
@@ -68,9 +44,9 @@ def get_all():
     q = session.query(location).join(country).join(cost).all()
     allData = []
     for record in q:
-        costs = session.query(cost).filter('locationID'==record.locationID).all()
-        activities = session.query(locationActivity).filter('locationID'==record.locationID).join(activity).limit(5).all()
-        weathers = session.query(weather).filter('locationID'==record.locationID).join(month).all()
+        costs = session.query(cost).where('locationID'==record.locationID).all()
+        activities = session.query(locationActivity).where('locationID'==record.locationID).join(activity).limit(5).all()
+        weathers = session.query(weather).where('locationID'==record.locationID).join(month).all()
         activity_list = []
         weather_list = []
         cost_data=[]
