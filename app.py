@@ -48,16 +48,16 @@ def locations():
         "coordinates":{"longitude":locations.longitude,"latitude":locations.latitude}
     } for location in locations]})
 
-@app.route('/api/countries')
-@cross_origin()
-def countries():
-    countries = country.query.all()
-    return jsonify({"data":[{
-        "countryID":country.countryID,
-        "country":country.country,
-        "image":country.image,
-        "attribution":country.attribution
-    }for country in countries]})
+# @app.route('/api/countries')
+# @cross_origin()
+# def countries():
+#     countries = country.query.all()
+#     return jsonify({"data":[{
+#         "countryID":country.countryID,
+#         "country":country.country,
+#         "image":country.image,
+#         "attribution":country.attribution
+#     }for country in countries]})
 
 
 
@@ -70,7 +70,7 @@ def get_all():
         ID  = record.locationID
         city = record.city
         locality = record.locality
-        country = record.country
+        countryh_name = record.country
         imagetest = record.image
     data_test = {"data":{"ID":ID,"imagetest":imagetest}}
     return jsonify(data_test)
