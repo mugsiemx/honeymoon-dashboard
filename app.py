@@ -57,9 +57,9 @@ def get_all():
         for a in activities:
             activity_data = {
                 "activity" : a.activity.category,
-                "image" : a.image,
-                "attribution":a.attribution,
-                "link":a.link
+                "image" : a.activity.image,
+                "attribution":a.activity.attribution,
+                "link":a.activity.link
             }
             activity_list.append(activity_data)
         for w in weathers:
