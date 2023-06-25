@@ -70,8 +70,8 @@ def get_all():
         ID  = record.locationID
         city = record.city
         locality = record.locality
-        countryh_name = record.country
-        imagetest = record.image
+        country_name = record.country.country
+        imagetest = record.country.image
     data_test = {"data":{"ID":ID,"imagetest":imagetest}}
     return jsonify(data_test)
 
