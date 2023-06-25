@@ -51,11 +51,11 @@ def get_all():
         weather_list = []
         cost_list=[]
 
-        for c in costs:
-            cost_data = {
-                "costRank":c.totalRank
-            }
-            cost_list.append(cost_data)
+        # for c in costs:
+        #     cost_data = {
+        #         "costRank":c.totalRank
+        #     }
+        #     cost_list.append(cost_data)
 
         for a in activities:
             activity_data = {
@@ -91,7 +91,7 @@ def get_all():
                     "attribution":record.country.attribution,
                     "image":record.country.image
                 },
-                "costRank":costs.totalRank
+                "costRank":costs[0].totalRank
                 },
             "geometry":{
                 "type":"Point",
