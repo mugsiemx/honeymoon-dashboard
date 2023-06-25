@@ -68,8 +68,8 @@ def get_all():
     q = session.query(location).join(country).join(cost).join(weather).join(month).join(locationActivity).join(activity).all()
     allData = []
     for record in q:
-        activities = session.query(locationActivity).filter(session.locationID==record.locationID).join(activity).limit(5).all()
-        weathers = session.query(weather).filter(session.locationID==record.locationID).join(month).all()
+        activities = session.query(locationActivity).filter('locationID'==record.locationID).join(activity).limit(5).all()
+        weathers = session.query(weather).filter('locationID'==record.locationID).join(month).all()
         activity_list = []
         weather_list = []
          
