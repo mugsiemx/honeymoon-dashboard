@@ -68,9 +68,27 @@ def get_all():
     q = session.query(location).join(country).join(cost).join(weather).join(month).join(locationActivity).join(activity).all()
     allData = []
     for record in q:
-        ## add code here to query the top 5 activities and the weather averages for each month
-        #################################################################
-
+        activities = session.query(locationActivity).filter(session.locationID==record.locationID).join(activity).limit(5).all()
+        weathers = session.query(weather).filter(session.locationID==record.locationID).join(month).all()
+        activity_list = []
+        weather_list = []
+         
+        for a in activities:
+            activity_data = {
+                "activity" : a.category,
+                "image" : a.image,
+                "attribution":a.attribution,
+                "link":a.link
+            }
+            activity_list.append(activity_data)
+        for w in weathers:
+            weather_data = {
+                "month":w.month,
+                "year":w.year,
+                "sun":w.sun,
+                "temp":w.temp
+            }
+            weather_list.append(weather_data)
 
         data = {
             "type":"Feature",
@@ -82,19 +100,9 @@ def get_all():
                     "country":record.country.country,
                 },
                 ########### update weather variables to reflect newly gathered code above
-                "weather":{
-                    "month":record.month,
-                    "year":record.year,
-                    "sun":record.sun,
-                    "temp":record.temp
-                },
+                "weather":weather_list,
                 ########### update activity variables to reflect newly gathered code above
-                "activities":{
-                    "activityID":record.activityID,
-                    "image":record.activity.image,
-                    "attribution":record.activity.attribution,
-                    "link":record.activity.link
-                },
+                "activities":activity_list,
                 "flag":{
                     "attribution":record.country.attribution,
                     "image":record.country.image
