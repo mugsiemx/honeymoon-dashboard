@@ -73,8 +73,8 @@ def get_all():
             "properties":{
                 "ID":record.locationID,
                 "name":{
-                    "city":record.location.city,
-                    "locality":record.location.locality,
+                    "city":record.city,
+                    "locality":record.locality,
                     "country":record.country.country,
                 },
                 "weather":{
@@ -97,7 +97,7 @@ def get_all():
                 },
             "geometry":{
                 "type":"Point",
-                "coordinates":[record.location.longitude,record.location.latitude]
+                "coordinates":[record.longitude,record.latitude]
             }
         }
         allData.append(data)
