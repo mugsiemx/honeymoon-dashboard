@@ -68,6 +68,10 @@ def get_all():
     q = session.query(location).join(country).join(cost).join(weather).join(month).join(locationActivity).join(activity).all()
     allData = []
     for record in q:
+        ## add code here to query the top 5 activities and the weather averages for each month
+        #################################################################
+
+
         data = {
             "type":"Feature",
             "properties":{
@@ -77,12 +81,14 @@ def get_all():
                     "locality":record.locality,
                     "country":record.country.country,
                 },
+                ########### update weather variables to reflect newly gathered code above
                 "weather":{
                     "month":record.month,
                     "year":record.year,
                     "sun":record.sun,
                     "temp":record.temp
                 },
+                ########### update activity variables to reflect newly gathered code above
                 "activities":{
                     "activityID":record.activityID,
                     "image":record.activity.image,
@@ -103,126 +109,6 @@ def get_all():
         allData.append(data)
     jsonData = {"type":"FeatureCollection","features":allData}
     return jsonify(jsonData)
-
-# @app.route('/api/get_all')
-# @cross_origin()
-# def getdata():    
-#     session = Session(engine)
-#     locationIDsearch = session.query(location.locationID).all()
-#     locationIDs = []
-#     # Create list of IDs
-#     for location in locationIDsearch:
-#         locationIDs.append(location[0])
-#     print(locationIDs)
-#     # Iterate through list of IDs to gather info for individual locations
-#     allData = []
-#     for ID in locationIDs:
-#         locationInfo = session.query(location).filter_by(locationID = ID).all()
-#         for record in locationInfo:
-#             city = record.city
-#             countryID = record.countryID
-#             locality = record.locality
-#             coordinates = [record.longitude,record.latitude]
-#         activityInfo = session.query(locationActivity).filter_by(locationID = ID).limit(5).all()
-#         activity_list = []
-#         for record in activityInfo:
-#             activityID=record.activityID
-#             image=record.image
-#             attribution=record.attribution
-#             link=record.link
-#             activity_dict = { "name":activity,
-#                              "image":image,
-#                              "attribution":attribution,
-#                              "link":link
-#                             }
-#             activity_list.append(activity_dict)
-#         tempInfo = session.query(Temperature).filter_by(LocationID=ID).all()
-#         for record in tempInfo:
-#             JanTemp = record.January
-#             FebTemp = record.February
-#             MarTemp = record.March
-#             AprTemp = record.April
-#             MayTemp = record.May
-#             JunTemp = record.June
-#             JulTemp = record.July
-#             AugTemp = record.August
-#             SepTemp = record.September
-#             OctTemp = record.October
-#             NovTemp = record.November
-#             DecTemp = record.December
-#         sunInfo = session.query(SunDays).filter_by(LocationID=ID).all()
-#         for record in sunInfo:
-#             JanSun = record.January
-#             FebSun = record.February
-#             MarSun = record.March
-#             AprSun = record.April
-#             MaySun = record.May
-#             JunSun = record.June
-#             JulSun = record.July
-#             AugSun = record.August
-#             SepSun = record.September
-#             OctSun = record.October
-#             NovSun = record.November
-#             DecSun = record.December
-#         flagInfo = session.query(CountryFlags).filter_by(Country=country).all()
-#         for record in flagInfo:
-#             countryAttribution = record.Attribution
-#             countryImage = record.Image
-#         costInfo = session.query(Cost).filter_by(LocationID=ID).all()
-#         for record in costInfo:
-#             costRank = record.cost_rank
-#         idData = {"type":"Feature",
-#                   "properties": {
-#                         "ID":ID,
-#                         "name": {
-#                             "city": city,
-#                             "locality": locality,
-#                             "country" : country
-#                         },
-#                         "avgTemp":{
-#                             "January":JanTemp,
-#                             "February":FebTemp,
-#                             "March":MarTemp,
-#                             "April":AprTemp,
-#                             "May":MayTemp,
-#                             "June":JunTemp,
-#                             "July":JulTemp,
-#                             "August":AugTemp,
-#                             "September":SepTemp,
-#                             "October":OctTemp,
-#                             "November":NovTemp,
-#                             "December":DecTemp
-#                         },
-#                         "sunDays":{
-#                             "January":JanSun,
-#                             "February":FebSun,
-#                             "March":MarSun,
-#                             "April":AprSun,
-#                             "May":MaySun,
-#                             "June":JunSun,
-#                             "July":JulSun,
-#                             "August":AugSun,
-#                             "September":SepSun,
-#                             "October":OctSun,
-#                             "November":NovSun,
-#                             "December":DecSun
-#                         },
-#                         "activities":[
-#                           activity_list],
-#                         "flag":{
-#                             "attribution":countryAttribution,
-#                             "image":countryImage
-#                         },
-#                         "costRank" : costRank
-#                         },
-#                   "geometry": {
-#                         "type":"Point",
-#                         "coordinates":coordinates
-#                         }
-#                 }
-#         allData.append(idData)
-#     jsonData = {"type":"FeatureCollection","features":allData}
-#     return jsonify(jsonData)
 
 
 if __name__ == "__main__":
