@@ -51,7 +51,7 @@ def locations():
 @app.route('/api/countries')
 @cross_origin()
 def countries():
-
+    "test"
 
 
 
