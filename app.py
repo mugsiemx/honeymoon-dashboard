@@ -71,7 +71,7 @@ def get_all():
         data = {
             "type":"Feature",
             "properties":{
-                "ID":record.location.locationID,
+                "ID":record.locationID,
                 "name":{
                     "city":record.location.city,
                     "locality":record.location.locality,
