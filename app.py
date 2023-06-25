@@ -45,8 +45,8 @@ def get_all():
     allData = []
     for record in q:
         costs = session.query(cost).where('locationID'==record.locationID).all()
-        activities = session.query(locationActivity).filter(locationActivity.locationID == record.locationID).join(activity).limit(5).all()
-        weathers = session.query(weather).filter(weather.locationID == record.locationID).join(month).all()
+        activities = session.query(locationActivity).filter(locationActivity.locationID == record.locationID).join(activity,locationActivity.activityID==activity.activityID).limit(5).all()
+        weathers = session.query(weather).filter(weather.locationID == record.locationID).join(month,weather.monthID==month.monthID).all()
         activity_list = []
         weather_list = []
         cost_data=[]
