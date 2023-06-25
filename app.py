@@ -64,7 +64,7 @@ def get_all():
             activity_list.append(activity_data)
         for w in weathers:
             weather_data = {
-                "month":w.month,
+                "month":w.month.month,
                 "year":w.year,
                 "sun":w.sun,
                 "temp":w.temp
