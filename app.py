@@ -52,7 +52,7 @@ def get_all():
         cost_data=[]
 
         for c in costs:
-            cost_data = c.totalRank
+            cost_data.append(c.totalRank)
 
         for a in activities:
             activity_data = {
