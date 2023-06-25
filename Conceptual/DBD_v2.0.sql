@@ -51,6 +51,7 @@ CREATE TABLE "locationActivity" (
 CREATE TABLE "activity" (
     -- Unique activity options with images
     "activityID" int   NOT NULL,
+    "category" text   NOT NULL,
     "attribution" text   NOT NULL,
     "image" text   NOT NULL,
     "link" text   NOT NULL,
