@@ -73,6 +73,8 @@ def get_all():
         weathers = session.query(weather).filter('locationID'==record.locationID).join(month).all()
         activity_list = []
         weather_list = []
+        cost_data=[]
+
         for c in costs:
             cost_data = c.totalRank
 
