@@ -56,9 +56,9 @@ def get_all():
 
         for a in activities:
             activity_data = {
-                "activity" : a.activity.image,
-                "image" : a.activity.category,
-                "attribution":a.activity.attribution,
+                "activity" : a.activity.attribution,
+                "image" : a.activity.image,
+                "attribution":a.activity.category,
                 "link":a.activity.link
             }
             activity_list.append(activity_data)
