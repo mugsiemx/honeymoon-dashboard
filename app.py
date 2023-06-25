@@ -56,7 +56,7 @@ def get_all():
 
         for a in activities:
             activity_data = {
-                "activity" : a.category,
+                "activity" : a.activity.category,
                 "image" : a.image,
                 "attribution":a.attribution,
                 "link":a.link
