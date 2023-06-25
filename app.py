@@ -78,13 +78,13 @@ def get_all():
                     "country":record.country.country,
                 },
                 "weather":{
-                    "month":record.month.month,
-                    "year":record.weather.year,
-                    "sun":record.weather.sun,
-                    "temp":record.weather.temp
+                    "month":record.month,
+                    "year":record.year,
+                    "sun":record.sun,
+                    "temp":record.temp
                 },
                 "activities":{
-                    "activityID":record.activity.activityID,
+                    "activityID":record.activityID,
                     "image":record.activity.image,
                     "attribution":record.activity.attribution,
                     "link":record.activity.link
@@ -93,7 +93,7 @@ def get_all():
                     "attribution":record.country.attribution,
                     "image":record.country.image
                 },
-                "costRank":record.cost.totalRank
+                "costRank":record.totalRank
                 },
             "geometry":{
                 "type":"Point",
