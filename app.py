@@ -66,14 +66,43 @@ def locations():
 def get_all():
     session = Session(engine)
     q = session.query(location).join(country).join(cost).join(weather).join(month).join(locationActivity).join(activity).all()
+    allData = []
     for record in q:
-        ID  = record.locationID
-        city = record.city
-        locality = record.locality
-        country_name = record.country.country
-        imagetest = record.country.image
-    data_test = {"data":{"ID":ID,"imagetest":imagetest}}
-    return jsonify(data_test)
+        data = {
+            "type":"Feature",
+            "properties":{
+                "ID":record.location.locationID,
+                "name":{
+                    "city":record.location.city,
+                    "locality":record.location.locality,
+                    "country":record.country.country,
+                },
+                "weather":{
+                    "month":record.month.month,
+                    "year":record.weather.year,
+                    "sun":record.weather.sun,
+                    "temp":record.weather.temp
+                },
+                "activities":{
+                    "activityID":record.activity.activityID,
+                    "image":record.activity.image,
+                    "attribution":record.activity.attribution,
+                    "link":record.activity.link
+                },
+                "flag":{
+                    "attribution":record.country.attribution,
+                    "image":record.country.image
+                },
+                "costRank":record.cost.totalRank
+                },
+            "geometry":{
+                "type":"Point",
+                "coordinates":[record.location.longitude,record.location.latitude]
+            }
+        }
+        allData.append(data)
+    jsonData = {"type":"FeatureCollection","features":allData}
+    return jsonify(jsonData)
 
 # @app.route('/api/get_all')
 # @cross_origin()
