@@ -51,10 +51,22 @@ def locations():
 @app.route('/api/countries')
 @cross_origin()
 def countries():
-    "test"
+    countries = country.query.all()
+    return jsonify({"data":[{
+        "countryID":country.countryID,
+        "country":country.country,
+        "image":country.image,
+        "attribution":country.attribution
+    }for country in countries]})
 
 
 
+@app.route('/api/get_all')
+@cross_origin()
+def get_all():
+    session = Session(engine)
+    q = session.query(location).join(country).join(cost).join(weather).join(month).join(locationActivity).join(activity).all()
+    return jsonify(q)
 
 # @app.route('/api/get_all')
 # @cross_origin()
