@@ -19,45 +19,66 @@ Base.prepare(engine,reflect=True)
 print(Base.classes.keys())
 
 # Save table references
-Activities = Base.classes.fullactivities
-CountryFlags = Base.classes.countryFlags
-Locations = Base.classes.locations
-SunDays = Base.classes.sunHours
-Temperature = Base.classes.temperature
-Cost = Base.classes.costData
+cost = Base.classes.cost
+country = Base.classes.country
+location = Base.classes.location
+locationActivity = Base.classes.locationActivity
+activity = Base.classes.activity
+weather = Base.classes.weather
+month = Base.classes.month
 
 #create engine 
 app = Flask(__name__)
 
-# #test
+#test
 @app.route('/')
 @cross_origin()
 def welcome():
     return 'Welcome to our API!! Use /api/get_all to get all JSON data'
 
+@app.route('/api/locations')
+@cross_origin()
+def locations():
+    locations = location.query.all()
+    return jsonify({"data":[{
+        "locationID":locations.locationID,
+        "countryID":locations.countryID,
+        "city":locations.city,
+        "locality":locations.locality,
+        "coordinates":{"longitude":locations.longitude,"latitude":locations.latitude}
+    } for location in locations]})
+
+@app.route('/api/countries')
+@cross_origin()
+def countries():
+
+
+
+
+
 @app.route('/api/get_all')
 @cross_origin()
 def getdata():    
     session = Session(engine)
-    locationIDsearch = session.query(Locations.LocationID).all()
+    locationIDsearch = session.query(location.locationID).all()
     locationIDs = []
     # Create list of IDs
-    for LocationID in locationIDsearch:
-        locationIDs.append(LocationID[0])
+    for location in locationIDsearch:
+        locationIDs.append(location[0])
     print(locationIDs)
     # Iterate through list of IDs to gather info for individual locations
     allData = []
     for ID in locationIDs:
-        locationInfo = session.query(Locations).filter_by(LocationID = ID).all()
+        locationInfo = session.query(location).filter_by(locationID = ID).all()
         for record in locationInfo:
-            city = record.City
-            country = record.Country
-            locality = record.Locality
-            coordinates = [record.Longitude,record.Latitude]
-        activityInfo = session.query(Activities).filter_by(LocationID = ID).all()
+            city = record.city
+            countryID = record.countryID
+            locality = record.locality
+            coordinates = [record.longitude,record.latitude]
+        activityInfo = session.query(locationActivity).filter_by(locationID = ID).limit(5).all()
         activity_list = []
         for record in activityInfo:
-            activity=record.activity
+            activityID=record.activityID
             image=record.image
             attribution=record.attribution
             link=record.link
