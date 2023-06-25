@@ -65,58 +65,59 @@ def locations():
 @cross_origin()
 def get_all():
     session = Session(engine)
-    q = session.query(location).join(country).join(cost).join(weather).join(month).join(locationActivity).join(activity).all()
-    allData = []
-    for record in q:
-        activities = session.query(locationActivity).filter('locationID'==record.locationID).join(activity).limit(5).all()
-        weathers = session.query(weather).filter('locationID'==record.locationID).join(month).all()
-        activity_list = []
-        weather_list = []
+    q = session.query(location).join(country).join(cost).all()
+    return q
+    # allData = []
+    # for record in q:
+    #     activities = session.query(locationActivity).filter('locationID'==record.locationID).join(activity).limit(5).all()
+    #     weathers = session.query(weather).filter('locationID'==record.locationID).join(month).all()
+    #     activity_list = []
+    #     weather_list = []
          
-        for a in activities:
-            activity_data = {
-                "activity" : a.category,
-                "image" : a.image,
-                "attribution":a.attribution,
-                "link":a.link
-            }
-            activity_list.append(activity_data)
-        for w in weathers:
-            weather_data = {
-                "month":w.month,
-                "year":w.year,
-                "sun":w.sun,
-                "temp":w.temp
-            }
-            weather_list.append(weather_data)
+    #     for a in activities:
+    #         activity_data = {
+    #             "activity" : a.category,
+    #             "image" : a.image,
+    #             "attribution":a.attribution,
+    #             "link":a.link
+    #         }
+    #         activity_list.append(activity_data)
+    #     for w in weathers:
+    #         weather_data = {
+    #             "month":w.month,
+    #             "year":w.year,
+    #             "sun":w.sun,
+    #             "temp":w.temp
+    #         }
+    #         weather_list.append(weather_data)
 
-        data = {
-            "type":"Feature",
-            "properties":{
-                "ID":record.locationID,
-                "name":{
-                    "city":record.city,
-                    "locality":record.locality,
-                    "country":record.country.country,
-                },
-                ########### update weather variables to reflect newly gathered code above
-                "weather":weather_list,
-                ########### update activity variables to reflect newly gathered code above
-                "activities":activity_list,
-                "flag":{
-                    "attribution":record.country.attribution,
-                    "image":record.country.image
-                },
-                "costRank":record.cost.totalRank
-                },
-            "geometry":{
-                "type":"Point",
-                "coordinates":[record.longitude,record.latitude]
-            }
-        }
-        allData.append(data)
-    jsonData = {"type":"FeatureCollection","features":allData}
-    return jsonify(jsonData)
+    #     data = {
+    #         "type":"Feature",
+    #         "properties":{
+    #             "ID":record.locationID,
+    #             "name":{
+    #                 "city":record.city,
+    #                 "locality":record.locality,
+    #                 "country":record.country.country,
+    #             },
+    #             ########### update weather variables to reflect newly gathered code above
+    #             "weather":weather_list,
+    #             ########### update activity variables to reflect newly gathered code above
+    #             "activities":activity_list,
+    #             "flag":{
+    #                 "attribution":record.country.attribution,
+    #                 "image":record.country.image
+    #             },
+    #             "costRank":record.cost.totalRank
+    #             },
+    #         "geometry":{
+    #             "type":"Point",
+    #             "coordinates":[record.longitude,record.latitude]
+    #         }
+    #     }
+    #     allData.append(data)
+    # jsonData = {"type":"FeatureCollection","features":allData}
+    # return jsonify(jsonData)
 
 
 if __name__ == "__main__":
