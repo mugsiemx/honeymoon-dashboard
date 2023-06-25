@@ -107,7 +107,7 @@ def get_all():
                     "attribution":record.country.attribution,
                     "image":record.country.image
                 },
-                "costRank":record.totalRank
+                "costRank":record.cost.totalRank
                 },
             "geometry":{
                 "type":"Point",
