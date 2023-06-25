@@ -49,10 +49,13 @@ def get_all():
         weathers = session.query(weather).filter(weather.locationID == record.locationID).join(month,weather.monthID==month.monthID).all()
         activity_list = []
         weather_list = []
-        cost_data=[]
+        cost_list=[]
 
         for c in costs:
-            cost_data.append(c.totalRank)
+            cost_data = {
+                "costRank":c.totalRank
+            }
+            cost_list.append(cost_data)
 
         for a in activities:
             activity_data = {
@@ -88,7 +91,7 @@ def get_all():
                     "attribution":record.country.attribution,
                     "image":record.country.image
                 },
-                "costRank":cost_data
+                "costRank":cost_list
                 },
             "geometry":{
                 "type":"Point",
