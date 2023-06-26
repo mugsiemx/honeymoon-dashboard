@@ -83,13 +83,13 @@ def get_all():
                     "locality":record.locality,
                     "country":record.country.country,
                 },
-                ########### update weather variables to reflect newly gathered code above
+                # update weather variables to reflect newly gathered code above
                 "weather":weather_list,
-                ########### update activity variables to reflect newly gathered code above
+                # update activity variables to reflect newly gathered code above
                 "activities":activity_list,
                 "flag":{
                     "attribution":record.country.attribution,
-                    "image":record.country.image
+                    "image":record.country.image + ".png"
                 },
                 "costRank":costs[0].totalRank
                 },
