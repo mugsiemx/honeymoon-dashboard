@@ -49,13 +49,6 @@ def get_all():
         weathers = session.query(weather).filter(weather.locationID == record.locationID).join(month,weather.monthID==month.monthID).all()
         activity_list = []
         weather_list = []
-        cost_list=[]
-
-        # for c in costs:
-        #     cost_data = {
-        #         "costRank":c.totalRank
-        #     }
-        #     cost_list.append(cost_data)
 
         for a in activities:
             activity_data = {

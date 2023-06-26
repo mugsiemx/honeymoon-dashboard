@@ -174,7 +174,7 @@ document.getElementById("5.3").innerHTML = locations[4].costRank + "/5"
 
 function initActivities(data){
 //////create the top 5 activities to have on start-up
-activities=data.features[0].properties.activities
+activities=data.features[12].properties.activities
 console.log(activities)
 // Image 1
 document.getElementById("act1").src= activities[0].image
