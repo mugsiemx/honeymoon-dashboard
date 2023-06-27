@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-  <title id="title"> Honeymoon Dashboard</title>
+  <title id="title"> Vacation Dashboard</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.min.css">
   <style></style>
@@ -39,7 +39,7 @@
     /* Choose background color of sidenav, set to max height */
     .sidenav {
       background-color:#f1f1f1;
-      height: 150%;
+      height: 135%;
     }
     /* Set grid height to 'auto' for small screens */
     @media screen and (max-width:767px){
@@ -60,8 +60,11 @@
 
   <div class="container-fluid">
     <div class="row content">
-      <div class="col-sm-3 sidenav"style="margin-top: 30px;">
+      <div class="col-sm-2 sidenav"style="margin-top: 90px;">
         <ul class="nav nav-pills nav-stacked">
+          <li class="well">
+            <h3 style="margin: 0;"><center>Vacation Criteria Selector</center></h3>
+          </li>
           <li class="well">
             <h3 style="margin: 0;">What month is your trip?</h3>
             <div class="container">
@@ -81,7 +84,10 @@
                 </select>  
               </div>
            </li>
-          <li class="well"><h4 style="margin: 0;">Cost</h4>
+          <li class="well">
+            <h4 style="margin: 0;">
+              <font size="5.5">Cost</font>
+            </h4>
             <div class="container">
               <select id="costSelect" onchange="costChanged(this.value)" style="width: 100px;">
                 <option value="all">All</option>
@@ -95,7 +101,10 @@
               <img src="Images/DollarSign.jpg" onclick="openModal();currentSlide(1)" class="rounded float left" alt=" image of dollar signs" width ="100" height = "100" align="left" >
             </div>
             </li>
-            <li class="well"><h4 style="margin: 0;">Temperature</h4>
+            <li class="well">
+              <h4 style="margin: 0;">
+                <font size="5.5">Temperature</font>
+              </h4>
               <div class="container">
                 <select id="tempSelect" onchange="tempChanged(this.value)"style="width: 100px;">
                   <option value="all">All</option>
@@ -109,7 +118,10 @@
                 <img src="Images/Thermometer.jpg" onclick="openModal();currentSlide(2)" class="rounded float left" alt=" image of thermometer" width ="100" height = "100"align="left">
               </div>
               </li>
-              <li class="well"><h4 style="margin: 0;">Sunny Days</h4>
+              <li class="well">
+                <h4 style="margin: 0;">
+                  <font size="5.5">Sunny Days</font>
+                </h4>
                 <div class="container">
                   <select id="sunSelect" onchange="sunChanged(this.value)"style="width: 100px;">
                     <option value="all">All</option>
@@ -129,10 +141,10 @@
       
       <div class="col-sm-9 text-center">
         <div class="page-header">
-          <h1 style="margin-top: -50px;">Honeymoon Dashboard</h1>
+          <h1 style="margin-top: -30px;">Vacation Dashboard</h1>
         </div>
         <!-- MAP DIV -->
-        <div class="well" style="margin-top: -60px; margin-right: 110px;">
+        <div class="well" style="margin-top: -20px; margin-right: 110px;">
           <div id="map">
             </div>
 
@@ -214,8 +226,11 @@
           </div>
         </div>
       </div>
-    <div class="row text-center" style="margin-top: 80px;">
-      <img id="logo1" src="Images/TheCo.png" class="rounded pull-left" alt="logo" width = "500" height="100">
+    <div class="row text-center" style="margin-top: 200px;">
+      <h1 style="margin-top: 100px;">
+        <font size="5" color="purple">Presented By:</font>
+      </h1>
+      <img id="logo1" src="Images/TheCo.png" class="float-right" alt="logo" width = "500" height="150">
       <br>
   </div>
     
