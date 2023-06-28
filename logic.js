@@ -118,7 +118,7 @@ function updateCharts(){
                 },
             });
             // Create a popup for each location with relevant info
-            layer.bindPopup(feature.properties.activity.city + ", " + feature.properties.activity.country);
+            layer.bindPopup(feature.properties.name.city + ", " + feature.properties.name.country);
             errors = [4,6,8,10]
             if (!errors.includes(feature.properties.ID)){
             locationList.push(feature.properties)}
